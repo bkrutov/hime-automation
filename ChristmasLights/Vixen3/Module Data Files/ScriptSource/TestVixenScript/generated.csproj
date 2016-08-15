@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>8c1350bf-79da-4d6a-ba31-c5178b453f08</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vixen.User</RootNamespace>
+    <AssemblyName>VixenScriptTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ColorGradients">
+      <HintPath>C:\Program Files\Vixen\Modules\App\ColorGradients.dll</HintPath>
+    </Reference>
+    <Reference Include="Curves">
+      <HintPath>C:\Program Files\Vixen\Modules\App\Curves.dll</HintPath>
+    </Reference>
+    <Reference Include="ValueTypes">
+      <HintPath>C:\Program Files\Vixen\Common\ValueTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Chase">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Chase.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomValue">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\CustomValue.dll</HintPath>
+    </Reference>
+    <Reference Include="Nutcracker">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Nutcracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Spin">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Spin.dll</HintPath>
+    </Reference>
+    <Reference Include="Twinkle">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Twinkle.dll</HintPath>
+    </Reference>
+    <Reference Include="Wipe">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Wipe.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Vixen">
+      <HintPath>C:\Program Files\Vixen\Vixen.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls">
+      <HintPath>C:\Program Files\Vixen\Common\Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Color">
+      <HintPath>C:\Program Files\Vixen\Modules\Property\Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Grid">
+      <HintPath>C:\Program Files\Vixen\Modules\Property\Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="Location">
+      <HintPath>C:\Program Files\Vixen\Modules\Property\Location.dll</HintPath>
+    </Reference>
+    <Reference Include="Alternating">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Alternating.dll</HintPath>
+    </Reference>
+    <Reference Include="Candle">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Candle.dll</HintPath>
+    </Reference>
+    <Reference Include="Launcher">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Launcher.dll</HintPath>
+    </Reference>
+    <Reference Include="LipSync">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\LipSync.dll</HintPath>
+    </Reference>
+    <Reference Include="Pulse">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\Pulse.dll</HintPath>
+    </Reference>
+    <Reference Include="RDS">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\RDS.dll</HintPath>
+    </Reference>
+    <Reference Include="SetLevel">
+      <HintPath>C:\Program Files\Vixen\Modules\Effect\SetLevel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main_Extended.cs" />
+    <Compile Include="Main.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
