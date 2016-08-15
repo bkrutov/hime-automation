@@ -57,10 +57,17 @@ class ModifiedDMXSerialClass
   // Terminate operation.
   void    term       (void);
 
-  bool isPacketReady(void);
+  volatile boolean isPacketReady(void);
 
-  void setPacketReady(bool in);
-  byte * GetPacketPointer(void);
+  void setPacketReady(boolean in);
+  
+  volatile boolean isFrameReady(void);
+
+  void setFrameRead(void);
+  
+  byte * GetPacketPointer(unsigned int idx);
+  
+  volatile int GetMaxReadyPacketIndex(void);
 };
 
 // Use the DMXSerial library through the DMXSerial object.
