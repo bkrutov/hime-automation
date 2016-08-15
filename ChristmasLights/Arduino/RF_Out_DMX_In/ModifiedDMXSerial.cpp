@@ -128,13 +128,12 @@ volatile unsigned int dmx_start_addr = 1;
 volatile unsigned int dmx_addr;
 // this is used to keep track of the channels
 volatile unsigned int chan_cnt;
-volatile int sub1 = 0;
-volatile int sub2 = 0;
+volatile unsigned int sub1 = 0;
+volatile unsigned int sub2 = 0;
 
 // tell us when to update
 volatile unsigned char update;
-volatile boolean packetready;
-volatile boolean frameready;
+volatile bool packetready = false;
 
 int rxStatusPin = 0;
 // ----- forwards -----
@@ -173,10 +172,6 @@ void ModifiedDMXSerialClass::init(int mode)
 			str[n][in] = 0;
 	}
 
-        //Init frame ready and packet ready indicators
-        frameready = false;
-        packetready = false;
-
 	// now start
 	_dmxMode = (DMXMode)mode;
 
@@ -199,29 +194,17 @@ void ModifiedDMXSerialClass::maxChannel(int channel)
 
 //TODO, Pull the RF packet writing out of the main loop so we dont have to hand out
 //these pointers
-byte * ModifiedDMXSerialClass::GetPacketPointer(unsigned int idx){
-	return &str[idx][0];
-}
-
-volatile int ModifiedDMXSerialClass::GetMaxReadyPacketIndex(void){
-        return sub1-1; 
+byte * ModifiedDMXSerialClass::GetPacketPointer(void){
+	return &str[sub1 - 1][0];
 }
 
 //TODO refactor me
-volatile boolean ModifiedDMXSerialClass::isPacketReady(void){
+bool ModifiedDMXSerialClass::isPacketReady(void){
 	return packetready;
 }
 
-void ModifiedDMXSerialClass::setPacketReady(boolean in){
+void ModifiedDMXSerialClass::setPacketReady(bool in){
 	packetready = in;
-}
-
-volatile boolean ModifiedDMXSerialClass::isFrameReady(void){
-	return frameready;
-}
-
-void ModifiedDMXSerialClass::setFrameRead(void){
-	frameready = false;
 }
 
 // Terminale operation
@@ -259,13 +242,10 @@ ISR(USART_RX_vect)
 
 	//ISR Refactored from Switch to preserve memory
 	if (dmx_state == DMX_IDLE){
-                digitalWrite(6,frameready ? HIGH : LOW);
 		if (status & (1 << FE0))
 		{
 			dmx_addr = 0;
-                        //Once we get a break, that means the new frame transmission is about to start, 
-                        //and we are about to read a new DMX packet.
-			dmx_state = DMX_BREAK;  
+			dmx_state = DMX_BREAK;  //Once we get a break, that means we are about to read a new DMX packet.
 		}
 	}
 	else if (dmx_state == DMX_BREAK)
@@ -281,9 +261,6 @@ ISR(USART_RX_vect)
 	}
 	else if (dmx_state == DMX_START)
 	{
-            if (!frameready)
-            {
-                digitalWrite(6,HIGH);
 		//New DMX frame
 		dmx_addr++;
 		//Logic to handle the first channel
@@ -297,16 +274,10 @@ ISR(USART_RX_vect)
 			chan_cnt++;
 			dmx_state = DMX_RUN;
 		}
-            }
-            else
-            {
-                dmx_state = DMX_IDLE;
-            }
 	}
 	else if (dmx_state == DMX_RUN)
 	{
-		digitalWrite(6,HIGH);
-                str[sub1][sub2++] = data;
+		str[sub1][sub2++] = data;
 		chan_cnt++;  //increment channel
 
 		//If we just added the 30th byte, its time to prep this packet for send.
@@ -324,11 +295,9 @@ ISR(USART_RX_vect)
 			{
 				sub2 = 0;
 				str[sub1][30] = sub1;
-				sub1++;//we sent the last packet reset
+				sub1 = 0;//we sent the last packet reset
 				packetready = true;
 			}
-                        frameready = true;
-                        digitalWrite(6,LOW);
 		}
 	}
 	else{

@@ -105,24 +105,33 @@ void setup(void)
 void loop(void)
 { 
   digitalWrite(2, LOW);
-  int maxReadyPacketIndex = ModifiedDMXSerial.GetMaxReadyPacketIndex();
-  
-  for (packetIndexToSend; packetIndexToSend < maxReadyPacketIndex+1; packetIndexToSend++) {
-    digitalWrite(2, HIGH);
-    byte status = 0;
-    radio.write_payload(ModifiedDMXSerial.GetPacketPointer(packetIndexToSend), 32);
-    delayMicroseconds(RF_DELAY);
-    status = radio.get_status();
-    while (status & 0x01)
-    {
-      status = radio.get_status();
-    }
+
+  if (ModifiedDMXSerial.isPacketReady())
+  {
+    digitalWrite(1, (txstat && initclean )? 1:0);
+    radio.writeFast(ModifiedDMXSerial.GetPacketPointer(), 32);
+    ModifiedDMXSerial.setPacketReady(false);
+    txstat= !txstat;
   }
   
-  if (ModifiedDMXSerial.isFrameReady()) {
-    packetIndexToSend = 0;
-    ModifiedDMXSerial.setFrameRead();
-    digitalWrite(2, LOW);
-  }
-  txstat= !txstat;
+//  int maxReadyPacketIndex = ModifiedDMXSerial.GetMaxReadyPacketIndex();
+//  
+//  for (packetIndexToSend; packetIndexToSend < maxReadyPacketIndex+1; packetIndexToSend++) {
+//    digitalWrite(2, HIGH);
+//    byte status = 0;
+//    radio.writeFast(ModifiedDMXSerial.GetPacketPointer(packetIndexToSend), 32);
+//    delayMicroseconds(RF_DELAY);
+//    status = radio.get_status();
+//    while (status & 0x01)
+//    {
+//      status = radio.get_status();
+//    }
+//  }
+//  
+//  if (ModifiedDMXSerial.isFrameReady()) {
+//    packetIndexToSend = 0;
+//    ModifiedDMXSerial.setFrameRead();
+//    digitalWrite(2, LOW);
+//  }
+//  txstat= !txstat;
 }
