@@ -18,23 +18,24 @@
  *    The Commercial Use of this Software is Prohibited.
  */
 
-#include <Arduino.h>
+//#include <Arduino.h>
 #include <EEPROM.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <SPI.h>
 #include <FastLED.h>
-#include <GEColorEffects.h>
-#include <LPD6803.h>
-#include <TimerOne.h>
-#include <WM2999.h>
+//#include <GEColorEffects.h>
+//#include <LPD6803.h>
+//#include <TimerOne.h>
+//#include <WM2999.h>
 
-#include "LPD6803.h"
+//#include "LPD6803.h"
 #include "IRFShowControl.h"
+#include "RFShowControl.h"
+//#include "WM2999RFShowControl.h"
+
 #include "MemoryFree.h"
 #include "printf.h"
-#include "RFShowControl.h"
-#include "WM2999RFShowControl.h"
 
 /********************* START OF REQUIRED CONFIGURATION ***********************/
 // NRF_TYPE Description: http://learn.komby.com/wiki/58/configuration-settings#NRF_TYPE
@@ -65,7 +66,7 @@
 
 // DATA_RATE Description:  http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
 // Valid Values: RF24_250KBPS, RF24_1MBPS
-#define DATA_RATE                       RF24_250KBPS
+#define DATA_RATE                       RF24_1MBPS//RF24_250KBPS
 
 // HARDCODED_START_CHANNEL Description:  http://learn.komby.com/wiki/58/configuration-settings#HARDCODED_START_CHANNEL
 // Valid Values: 1-512
@@ -73,7 +74,7 @@
 
 // HARDCODED_NUM_PIXELS Description:  http://learn.komby.com/wiki/58/configuration-settings#HARDCODED_NUM_PIXELS
 // Valid Values: 1-170
-#define HARDCODED_NUM_PIXELS            50
+#define HARDCODED_NUM_PIXELS            100
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
 
 /************** START OF ADVANCED SETTINGS SECTION (OPTIONAL) ****************/
@@ -83,16 +84,16 @@
 
 // PIXEL_CLOCK_PIN Description:  http://learn.komby.com/wiki/58/configuration-settings#PIXEL_CLOCK_PIN
 // Valid Values: Any arduino Analog or Digital pin, typically ~1-16
-#define PIXEL_CLOCK_PIN                 4
+//#define PIXEL_CLOCK_PIN                 4
 
 //How Bright should our LEDs start at Description:  http://learn.komby.com/wiki/58/configuration-settings#LED_BRIGHTNESS
-#define LED_BRIGHTNESS                  128 //50%
+#define LED_BRIGHTNESS                  255 //50%
 
 //#define DEBUG                           1
 
 //FCC_RESTRICT Description: http://learn.komby.com/wiki/58/configuration-settings#FCC_RESTRICT
 //Valid Values: 1, 0  (1 will prevent the use of channels that are not allowed in North America)
-#define FCC_RESTRICT 1
+//#define FCC_RESTRICT 1
 /********************* END OF ADVANCED SETTINGS SECTION **********************/
 
 
@@ -107,6 +108,8 @@ void setup(void)
   printf_begin();
   Serial.println("Initializing Radio");
 #endif
+  pinMode(4, OUTPUT);
+  digitalWrite(4, HIGH);
 
   radio.EnableOverTheAirConfiguration(OVER_THE_AIR_CONFIG_ENABLE);
   uint8_t logicalControllerNumber = 0;
@@ -131,61 +134,31 @@ void setup(void)
   printf("%d\n", countOfPixels);
 #endif
 
+Serial.println("FAST SPI Init path");
+leds = (CRGB*) radio.GetControllerDataBase(logicalControllerNumber++);
+memset(leds, 0, countOfPixels * sizeof(struct CRGB));
+//Initalize the data for LEDs
+//todo eventually this will be a bug
+delay(200);
+LEDS.setBrightness(LED_BRIGHTNESS);
 
-#ifdef FAST_SPI_CONTROL
-  leds = (CRGB*) radio.GetControllerDataBase(logicalControllerNumber++);
-  memset(leds, 0, countOfPixels * sizeof(struct CRGB));
-  //Initalize the data for LEDs
-  //todo eventually this will be a bug
-  delay(200);
-  LEDS.setBrightness(LED_BRIGHTNESS);
-#else
-  strip.Begin(radio.GetControllerDataBase(logicalControllerNumber), radio.GetNumberOfChannels(logicalControllerNumber));
-
-  for (int i = 0; i < strip.GetElementCount() / 3; i++)
-  {
-    strip.SetElementColor(i, strip.Color(0, 0, 0));
-  }
-  strip.Paint();
-#endif
-
-  #if (PIXEL_TYPE == LPD_8806)
-  LEDS.addLeds(new LPD8806Controller<PIXEL_DATA_PIN, PIXEL_CLOCK_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-  #elif (PIXEL_TYPE == WS_2801)
-  LEDS.addLeds(new WS2801Controller<PIXEL_DATA_PIN, PIXEL_CLOCK_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-  #elif (PIXEL_TYPE == SM_16716)
-  LEDS.addLeds(new SM16716Controller<PIXEL_DATA_PIN, PIXEL_CLOCK_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-  #elif (PIXEL_TYPE == TM_1809)
-  LEDS.addLeds(new TM1809Controller800Khz<PIXEL_DATA_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-  #elif (PIXEL_TYPE == TM_1803)
-  LEDS.addLeds(new TM1803Controller400Khz<PIXEL_DATA_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-  #elif (PIXEL_TYPE == UCS_1903)
-  LEDS.addLeds(new UCS1903Controller400Khz<PIXEL_DATA_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-  #elif (PIXEL_TYPE == WS_2811)
-  LEDS.addLeds(new WS2811Controller800Khz<PIXEL_DATA_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
-
-  #elif ((PIXEL_TYPE != LPD_6803) && \
-       (PIXEL_TYPE != WM_2999) && \
-       (PIXEL_TYPE != GECE))
-    #error Must define PIXEL_TYPE: (WS_2801,LPD_8806,WS_2811,UCS_1903,TM_1803,SM_16716,LPD_6803,WM_2999,GECE)
-  #endif
+LEDS.addLeds(new WS2811Controller800Khz<PIXEL_DATA_PIN, PIXEL_COLOR_ORDER>(), leds, countOfPixels, 0);
 
 #ifdef DEBUG
   radio.PrintControllerConfig();
   Serial.print(F("freeMemory()="));
   Serial.println(freeMemory());
 #endif
+  digitalWrite(4, LOW);
 }
 
 void loop(void)
 {
+  digitalWrite(4, LOW);
   //When Radio.Listen returns true its time to update the LEDs for all controllers, a full update was made
   if (radio.Listen())
   {
-#ifdef FAST_SPI_CONTROL
-    LEDS.show();
-#else
-    strip.Paint();
-#endif
+      digitalWrite(4, HIGH);
+      LEDS.show();
   }
 }
