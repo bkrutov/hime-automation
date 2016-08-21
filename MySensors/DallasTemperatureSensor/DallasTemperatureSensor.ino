@@ -128,9 +128,9 @@ void loop()
   sensors.requestTemperatures();
 
   // query conversion time and sleep until conversion completed
-  int16_t conversionTime = sensors.millisToWaitForConversion(sensors.getResolution());
+  int16_t conversionTime = 750 / (1 << (12 - sensors.getResolution()));
   // sleep() call can be replaced by wait() call if node need to process incoming messages (or if node is repeater)
-  sleep(conversionTime);
+  wait(conversionTime);
 
   // Read temperatures and send them to controller 
   for (int i=0; i<numSensors && i<MAX_ATTACHED_DS18B20; i++) {
