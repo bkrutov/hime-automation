@@ -26,7 +26,7 @@
 
 
 // Enable debug prints to serial monitor
-//#define MY_DEBUG 
+#define MY_DEBUG 
 
 // Enable and select radio type attached
 #define MY_RADIO_NRF24
@@ -88,9 +88,6 @@ void presentation() {
   for (int i=0; i<numSensors && i<MAX_ATTACHED_DS18B20; i++) {   
      present(i, S_TEMP);
   }
-  send(msg.setSensor(0).set(20,1));
-  send(msg.setSensor(0).set(21,1));
-  send(msg.setSensor(0).set(22,1));
 }
 
 void loop()     
