@@ -166,7 +166,7 @@ LOCAL void RF24_stopListening(void) {
 
 LOCAL void RF24_powerDown(void) {
 	RF24_ce(LOW);
-	RF24_setRFConfiguration(MY_RF24_CONFIGURATION);
+	RF24_setRFConfiguration(MY_RF24_CONFIGURATION & ~_BV(PWR_UP) );
 	RF24_DEBUG(PSTR("RF24:power down\n"));
 }
 
