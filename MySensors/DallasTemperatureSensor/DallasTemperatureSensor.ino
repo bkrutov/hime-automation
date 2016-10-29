@@ -47,7 +47,7 @@ int oldBatteryPcnt = 0;
 
 #define ONE_WIRE_BUS 3 // Pin where dallase sensor is connected 
 #define MAX_ATTACHED_DS18B20 16
-unsigned long SLEEP_TIME = 300000; // Sleep time between reads (in milliseconds)
+unsigned long SLEEP_TIME = 60000; // Sleep time between reads (in milliseconds)
 OneWire oneWire(ONE_WIRE_BUS); // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 DallasTemperature sensors(&oneWire); // Pass the oneWire reference to Dallas Temperature. 
 float lastTemperature[MAX_ATTACHED_DS18B20];
@@ -59,28 +59,18 @@ MyMessage msg(0,V_TEMP);
 
 void before()
 {  
-  
-  Serial.println("Before - pin 6 on");
-  pinMode (6, OUTPUT); 
-  digitalWrite (6, HIGH);  
-
   // Startup up the OneWire library
   sensors.begin();
 }
 
 void setup()  
 {  
-  Serial.println("Setup - pin 6 on");
-  pinMode (6, OUTPUT); 
-  digitalWrite (6, HIGH);
-  
   // use the 1.1 V internal reference
   #if defined(__AVR_ATmega2560__)
      analogReference(INTERNAL1V1);
   #else
      analogReference(INTERNAL);
   #endif
-
   
   // requestTemperatures() will not block current thread
   sensors.setWaitForConversion(false);
@@ -88,11 +78,7 @@ void setup()
 
 
 void presentation() {
-  Serial.println("Presentation - pin 6 on");
 
-  pinMode (6, OUTPUT); 
-  digitalWrite (6, HIGH);
-  
   // Send the sketch version information to the gateway and Controller
   sendSketchInfo("Temperature Sensor", "1.1");
 
@@ -107,10 +93,6 @@ void presentation() {
 
 void loop()     
 {    
-   pinMode (6, OUTPUT); 
-   digitalWrite (6, HIGH);
-
-   Serial.println("Loop - pin 6 on");
    // get the battery Voltage
    int sensorValue = analogRead(BATTERY_SENSE_PIN);
    #ifdef MY_DEBUG
@@ -147,7 +129,7 @@ void loop()
 
   // query conversion time and sleep until conversion completed
   int16_t conversionTime = 750 / (1 << (12 - sensors.getResolution()));
-  // sleep() call can be replaced by wait() call if node need to process incoming messages (or if node is repeater)
+
   wait(conversionTime);
 
   // Read temperatures and send them to controller 
@@ -171,33 +153,4 @@ void loop()
   }
 
   sleep(SLEEP_TIME);
-  /*
-  //explicit sleeping code below
-  Serial.println("Loop - pin 6 off");
-
-  //wait(20);
-  digitalWrite (6, LOW);
-  // disable ADC
-  ADCSRA = 0;  
-
-  // clear various "reset" flags
-  MCUSR = 0;     
-  // allow changes, disable reset
-  WDTCSR = bit (WDCE) | bit (WDE);
-  // set interrupt mode and an interval 
-  WDTCSR = bit (WDIE) | bit (WDP3) | bit (WDP0);    // set WDIE, and 8 seconds delay
-  wdt_reset();  // pat the dog
-  
-  set_sleep_mode (SLEEP_MODE_PWR_DOWN);  
-  sleep_enable();
-  sleep_cpu ();  
-  
-  // cancel sleep as a precaution
-  sleep_disable();
-
-  pinMode (6, OUTPUT); 
-  digitalWrite (6, HIGH);
-  
-  Serial.println("Loop - pin 6 on");
-  */
 }
