@@ -3803,6 +3803,7 @@
     <Patch componentId="c4229a91-9c1d-4acc-9e55-fb421c580ead" sourceId="84aaa194-b228-4a7a-88a1-f42b92b5ba64" output="2" />
   </Patches>
   <DisabledDevices>
+    <Device id="160dadc3-d2f4-468c-8942-5d528adaad55" />
     <Device id="97629c57-ab3e-43a3-a946-1bcd181f1f9b" />
   </DisabledDevices>
 </SystemConfig>

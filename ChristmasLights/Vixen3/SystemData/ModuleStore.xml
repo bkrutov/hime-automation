@@ -520,13 +520,13 @@
           <ScheduleItem>
             <Enabled>true</Enabled>
             <EndDate>2015-02-01T00:00:00</EndDate>
-            <EndTime>2016-10-29T23:59:59</EndTime>
+            <EndTime>2016-12-26T23:59:59</EndTime>
             <Friday>true</Friday>
             <Monday>true</Monday>
             <Saturday>true</Saturday>
             <ShowID>3073cf55-886d-4b1d-81bd-d6cc00f1e712</ShowID>
             <StartDate>2015-01-13T00:00:00</StartDate>
-            <StartTime>2016-10-29T00:00:00</StartTime>
+            <StartTime>2016-12-26T00:00:00</StartTime>
             <Sunday>true</Sunday>
             <Thursday>true</Thursday>
             <Tuesday>true</Tuesday>
@@ -11975,7 +11975,7 @@
         <Unicast i:nil="true" />
         <Universes xmlns:a="http://schemas.datacontract.org/2004/07/VixenModules.Controller.E131">
           <a:UniverseEntry>
-            <a:Active>true</a:Active>
+            <a:Active>false</a:Active>
             <a:EventRepeatCount>0</a:EventRepeatCount>
             <a:EventSuppressCount>0</a:EventSuppressCount>
             <a:Multicast>{FCFFE31D-AF6E-49D7-8C2C-55D31837EF53}</a:Multicast>
@@ -11984,7 +11984,7 @@
             <a:Ttl>64</a:Ttl>
             <a:Unicast i:nil="true" />
             <a:Universe>1</a:Universe>
-            <a:seqNum>210</a:seqNum>
+            <a:seqNum>0</a:seqNum>
           </a:UniverseEntry>
         </Universes>
         <Warnings>false</Warnings>
@@ -13881,13 +13881,13 @@
           </a:DisplayItem>
         </DisplayItems>
         <Height>776</Height>
-        <Left>45</Left>
+        <Left>467</Left>
         <SaveLocations>true</SaveLocations>
         <SetupHeight>786</SetupHeight>
         <SetupLeft>311</SetupLeft>
         <SetupTop>68</SetupTop>
         <SetupWidth>1038</SetupWidth>
-        <Top>89</Top>
+        <Top>219</Top>
         <Width>912</Width>
       </VixenPreviewData>
     </Module>
