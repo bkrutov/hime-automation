@@ -40,7 +40,8 @@
 *
 *    The Commercial Use of this Software is Prohibited.
 */
-
+// Below necessary to use alternative pins for nRF24 to avoid conflict with W5100
+#define SOFTSPI
 
 #include <Dhcp.h>
 #include <Dns.h>
@@ -108,21 +109,22 @@ static uint8_t ip[] = { 192, 168, 1, 200 };
 
 // MAC Address Description: http://learn.komby.com/wiki/58/configuration-settings#MAC-Address
 // YOU SHOULD NOT NEED TO CHANGE THIS SETTING
-static uint8_t mac[] = { 0x12, 0x34, 0x56, 0x00, 0x00, 0x00 + UNIVERSE};
+static uint8_t mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 + UNIVERSE};
 
 /********************* END OF ADVANCED SETTINGS SECTION **********************/
 
 
 #define PIXEL_TYPE                      NONE
-#define RF_WRAPPER                      1
+//Seems used to switch between original RF24 lib and komby RF24, but they are not fully conmatible
+#define RF_WRAPPER                      1 
 //Include this after all configuration variables are set
 #include "RFShowControlConfig.h"
 
 
 //END Configuration
 //Where in the packet does the dmx start
-#define DMX_CHANNEL_DATA_START          126 //DMX Packet Position 0xA8
-#define DMX_MAX_CHANNEL                 512
+#define DMX_CHANNEL_DATA_START          1  //126 //DMX Packet Position 0xA8
+#define DMX_MAX_CHANNEL                 510
 
 // If we have a MEGA we can use a larger buffer for better performance
 // Otherwise use the smaller size for a UNO
@@ -220,6 +222,11 @@ void loop(void)
   int packetSize = Udp.parsePacket();
   if (packetSize > 0)
   {
+//    Serial.print(F("Packet received: size = "));
+//    Serial.println(packetSize);
+    
+    //printf("Packet received: size = %d \r\n", packetSize);
+    
     if (validBuf == buffer2)
     {
       buf = buffer1;
@@ -233,6 +240,14 @@ void loop(void)
     bool vdmp = validateDMP(buf);
     bool vfr = validateFraming(buf);
 
+//    Serial.print(F("Packet validated: validateR ="));
+//    Serial.print((validateR)?"T":"F");
+//    Serial.print(F(", vdmp = "));
+//    Serial.print((vdmp)?"T":"F");
+//    Serial.print(F(", vfr = "));
+//    Serial.println((vfr)?"T":"F");
+    //printf("Packet validated: validateR = %s, vdmp= %s, vfr = %s \r\n", (validateR)?"T":"F", (vdmp)?"T":"F", (vfr)?"T":"F");
+    
     if (validateR && vdmp && vfr)
     {
       duration = millis();
@@ -243,12 +258,17 @@ void loop(void)
       numPackets = numChannelsInPacket / 30;
       universe = ((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]);
       uint8_t channelTmp = radio.GetChannel();
-      //printf("before %d, cu: $%d, ch %d\r\n", universe,currentUniverse, channelTmp);
+
+      Serial.print(F("before "));
+      Serial.print(universe);
+      Serial.print(F(", cu: "));
+      Serial.print(currentUniverse);
+      Serial.print(F(", ch "));
+      Serial.println(channelTmp);
+      //printf("before %d, cu: $%d, ch %d \r\n", universe,currentUniverse, channelTmp);
       //check and change channels if we are on the wrong universe
       if (currentUniverse != universe)
-      {
-        
-
+      {   
         if (universe == UNIVERSE){
           currentUniverse = universe; 
           radio.setChannel(TRANSMIT_CHANNEL);
@@ -261,22 +281,19 @@ void loop(void)
       }
       channelTmp = radio.GetChannel();
       if ((universe == UNIVERSE && channelTmp == TRANSMIT_CHANNEL) || (universe == UNIVERSE_2 && channelTmp == TRANSMIT_CHANNEL_2)) {
-        //  printf("send %d:%d, %d ch \n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
+        printf("send %d:%d, ch %d \r\n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
         transmitDataFromBuffer(buf);
         //delayMicroseconds(200);
       }
       else {
         
-        //  printf("not sent %d:%d, %d ch \n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
-      }
-      
-      
-      
+        printf("not sent %d:%d, ch %d \r\n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
+      }    
     }
   }
   //  else if (REFRESH_RATE && millis() - duration >= REFRESH_RATE)
   //  {
-  //    //no data received re-send
+  //    //no data received -re-send
   //    transmitDataFromBuffer(validBuf);
   //    duration = millis();
   //  }
