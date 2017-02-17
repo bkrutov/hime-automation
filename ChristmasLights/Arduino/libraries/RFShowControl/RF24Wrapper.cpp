@@ -58,52 +58,40 @@ bool RF24Wrapper::Initialize(int pRole, const uint64_t *pPipes, int pChannel, rf
 {
   bool r = false;
 
-  this->_channel =pChannel;
   this->dataRateSuccess = false;
   this->payloadSizeSetSuccessful = false;
   this->begin(); //initalize RF
   this->setRetries(0,0); //set # of retries & delay between retries
   this->dataRateSuccess=this->setDataRate(pDataRate); //set RF data rate
-  this->setPayloadSize(32);  //set RF packet size
 
+  this->setPayloadSize(32);  //set RF packet size
   if (this->getPayloadSize() == 32)
-  {
     this->payloadSizeSetSuccessful = true;
-  }
 
   this->setAutoAck(0); //Turn off Auto Ack!!!!
+
   this->setChannel(pChannel); //Change from the default channel...
+  this->channelSetSuccessfully = false;
+  if (this->GetChannel() == pChannel)
+	this->channelSetSuccessfully = true;
 
   this->setCRCLength(RF24_CRC_16); //Setup CRC
 
   if (pRole == TRANSMITTER)
   {
-    this->setChannel(pChannel); //Change from the default channel...
-  /*  channelSetSuccessfully = false;
-    if (this->GetChannel() == pChannel)
-    {
-      this->channelSetSuccessfully = true;
-    }*/
-	this->channelSetSuccessfully = true;
     this->openWritingPipe(pPipes[0]); //Open pipe for Writing
     this->openReadingPipe(1,pPipes[1]); //Open pipe for Reading...But we aren't reading anything....
     this->setPALevel(RF24_PA_MAX); //Set the power level to high!
 	//TODO Find a method in the new RF24 library to replace teh below method.
-   // this->write_register(CONFIG, (this->read_register(CONFIG) | _BV(PWR_UP)) & ~_BV(PRIM_RX)); //set up radio for writing!
+    //this->write_register(CONFIG, (this->read_register(CONFIG) | _BV(PWR_UP)) & ~_BV(PRIM_RX)); //set up radio for writing!
     this->flush_tx(); //Clear the TX FIFO Buffers
     this->powerUp(); //Fire up the radio
-   // this->ce(HIGH); //Turn on transmitter!
-    return true;
+    //this->ce(HIGH); //Turn on transmitter!
+    return this->channelSetSuccessfully;
   }
   else
   {
     //receiver setup
-
-    this->setChannel(this->_channel); //Change from the default channel...
-    channelSetSuccessfully = false;
-    if (this->GetChannel() == pChannel)
-    this->channelSetSuccessfully = true;
-
     this->pipes=pPipes;
     //setup as a receiver
     this->openWritingPipe(pPipes[1]); //Open pipe for Writing
@@ -172,12 +160,12 @@ bool RF24Wrapper::ChangeTransmitChannel(int pChannel)
 //	return RF24::read_register(reg); 
 //}
 //
-//uint8_t RF24Wrapper::write_register(uint8_t reg, uint8_t value)
-//{
-//	return RF24::write_register(reg, value);
-//}
-//void RF24Wrapper::ce(bool value)
-//{
-//	RF24::ce(value);
-//}
-//
+// uint8_t RF24Wrapper::write_register(uint8_t reg, uint8_t value)
+// {
+	// return RF24::write_register(reg, value);
+// }
+// void RF24Wrapper::ce(bool value)
+// {
+	// RF24::ce(value);
+// }
+

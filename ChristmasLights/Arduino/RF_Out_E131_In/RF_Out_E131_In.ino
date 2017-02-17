@@ -123,7 +123,7 @@ static uint8_t mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 + UNIVERSE};
 
 //END Configuration
 //Where in the packet does the dmx start
-#define DMX_CHANNEL_DATA_START          1  //126 //DMX Packet Position 0xA8
+#define DMX_CHANNEL_DATA_START          126 //DMX Packet Position 0xA8
 #define DMX_MAX_CHANNEL                 510
 
 // If we have a MEGA we can use a larger buffer for better performance

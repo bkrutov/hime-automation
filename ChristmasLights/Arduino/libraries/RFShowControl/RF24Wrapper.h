@@ -79,7 +79,7 @@ public:
   * @param value The new value to write
   * @return Current value of status register
   */
-//  uint8_t write_register(uint8_t reg, uint8_t value);
+  //uint8_t write_register(uint8_t reg, uint8_t value);
 
 
   /*

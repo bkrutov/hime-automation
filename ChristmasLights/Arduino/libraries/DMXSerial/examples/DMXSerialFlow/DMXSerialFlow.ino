@@ -1,7 +1,7 @@
 // - - - - -
 // DmxSerial - A hardware supported interface to DMX.
 // DMXSerialFlow.ino: Sample DMX application for sending 60 DMX values.
-// Copyright (c) 2014 by Matthias Hertel, http://www.mathertel.de
+// Copyright (c) 2014-2015 by Matthias Hertel, http://www.mathertel.de
 // This work is licensed under a BSD style license. See http://www.mathertel.de/License.aspx
 // 
 // Documentation and samples are available at http://www.mathertel.de/Arduino
