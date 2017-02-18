@@ -2,7 +2,7 @@
 <SystemConfig version="16">
   <Identity>ba2adce5-8e2f-4420-bae8-463f1e01248c</Identity>
   <AllowFilterEvaluation>true</AllowFilterEvaluation>
-  <DefaultUpdateInterval>50</DefaultUpdateInterval>
+  <DefaultUpdateInterval>20</DefaultUpdateInterval>
   <Channels>
     <Channel id="6b50d944-a9ec-45f1-9429-4ac654420316" name="Megatree" />
     <Channel id="908a0f86-783c-4cb1-905f-201bfaab9ae4" name="P-1-Top" />

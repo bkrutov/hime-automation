@@ -2,16 +2,18 @@
 <VixenApplicationData>
   <DataFormatVersion>3</DataFormatVersion>
   <RecentSequences>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\Background2.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\test.tim</SequenceFile>
-    <SequenceFile>C:\boris-presonal-GIT\home-automation\ChristmasLights\Vixen3\Sequence\test6.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\Nutcracker-March.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\TestVixenScript.scr</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\Background1.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared with ORE\ChristmasLights\Vixen 3\Sequence\Nutcracker-March.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared with ORE\ChristmasLights\Vixen 3\Sequence\test.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared with ORE\ChristmasLights\Vixen 3\Sequence\testybtyuuerthjykuyrf6xd3.tim</SequenceFile>
-    <SequenceFile>C:\Users\Boris\Dropbox\Shared with ORE\ChristmasLights\Vixen 3\Sequence\test5.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen3\Sequence\Background1.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen3\Sequence\slow-twinkle-glow.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\test.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\Background2.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen3\Sequence\test6.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\Nutcracker-March.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\TestVixenScript.scr</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\Background1.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\Nutcracker-March.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\test.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\testybtyuuerthjykuyrf6xd3.tim</SequenceFile>
+    <SequenceFile>C:\personal-git\home-automation\ChristmasLights\Vixen 3\Sequence\test5.tim</SequenceFile>
   </RecentSequences>
   <FilterShapePositions />
   <FilterSetupFormHighQualityRendering value="false" />

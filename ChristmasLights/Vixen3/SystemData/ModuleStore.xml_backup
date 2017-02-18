@@ -13,10 +13,10 @@
         <ModuleInstanceId xmlns="">64f4ab26-3ed4-49a3-a004-23656ed0424a</ModuleInstanceId>
         <ModuleTypeId xmlns="">64f4ab26-3ed4-49a3-a004-23656ed0424a</ModuleTypeId>
         <SelectorWindowBounds xmlns:a="http://schemas.datacontract.org/2004/07/System.Drawing">
-          <a:height>348</a:height>
-          <a:width>494</a:width>
-          <a:x>245</a:x>
-          <a:y>263</a:y>
+          <a:height>398</a:height>
+          <a:width>574</a:width>
+          <a:x>481</a:x>
+          <a:y>232</a:y>
         </SelectorWindowBounds>
         <_library xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
           <a:KeyValueOfstringColorGradientGbtyavQ7>
@@ -369,6 +369,74 @@
               <_title i:nil="true" />
             </a:Value>
           </a:KeyValueOfstringColorGradientGbtyavQ7>
+          <a:KeyValueOfstringColorGradientGbtyavQ7>
+            <a:Key>green-blue-violet-cool</a:Key>
+            <a:Value>
+              <IsCurrentLibraryGradient>true</IsCurrentLibraryGradient>
+              <_alphas>
+                <AlphaPoint>
+                  <_focus>0.5</_focus>
+                  <_position>0</_position>
+                  <_alpha>1</_alpha>
+                </AlphaPoint>
+                <AlphaPoint>
+                  <_focus>0.5</_focus>
+                  <_position>1</_position>
+                  <_alpha>1</_alpha>
+                </AlphaPoint>
+              </_alphas>
+              <_colors>
+                <ColorPoint>
+                  <_focus>0.5</_focus>
+                  <_position>0</_position>
+                  <_color xmlns:b="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+                    <b:_x>47.170317362814679</b:_x>
+                    <b:_y>76.084369000025291</b:_y>
+                    <b:_z>71.9949734295513</b:_z>
+                  </_color>
+                </ColorPoint>
+                <ColorPoint>
+                  <_focus>0.5</_focus>
+                  <_position>0.24870466321243523</_position>
+                  <_color xmlns:b="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+                    <b:_x>20.524034230960616</b:_x>
+                    <b:_y>9.9118179915908549</b:_y>
+                    <b:_z>95.439177264762037</b:_z>
+                  </_color>
+                </ColorPoint>
+                <ColorPoint>
+                  <_focus>0.5</_focus>
+                  <_position>0.43005181347150256</_position>
+                  <_color xmlns:b="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+                    <b:_x>46.5390703504051</b:_x>
+                    <b:_y>76.6003059732664</b:_y>
+                    <b:_z>33.953048543305734</b:_z>
+                  </_color>
+                </ColorPoint>
+                <ColorPoint>
+                  <_focus>0.5</_focus>
+                  <_position>0.61398963730569944</_position>
+                  <_color xmlns:b="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+                    <b:_x>35.2418287552239</b:_x>
+                    <b:_y>16.351688793153382</b:_y>
+                    <b:_z>95.906481897891325</b:_z>
+                  </_color>
+                </ColorPoint>
+                <ColorPoint>
+                  <_focus>0.5</_focus>
+                  <_position>0.89715536105032823</_position>
+                  <_color xmlns:b="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+                    <b:_x>49.032069386403037</b:_x>
+                    <b:_y>69.18272091760609</b:_y>
+                    <b:_z>105.37708278813435</b:_z>
+                  </_color>
+                </ColorPoint>
+              </_colors>
+              <_gammacorrected>false</_gammacorrected>
+              <_libraryReferenceName />
+              <_title i:nil="true" />
+            </a:Value>
+          </a:KeyValueOfstringColorGradientGbtyavQ7>
         </_library>
       </ColorGradientLibraryStaticData>
     </Module>
@@ -377,10 +445,10 @@
         <ModuleInstanceId xmlns="">4e258de2-7a75-4f0f-aa43-c8182e7f3400</ModuleInstanceId>
         <ModuleTypeId xmlns="">4e258de2-7a75-4f0f-aa43-c8182e7f3400</ModuleTypeId>
         <SelectorWindowBounds xmlns:a="http://schemas.datacontract.org/2004/07/System.Drawing">
-          <a:height>348</a:height>
-          <a:width>494</a:width>
-          <a:x>704</a:x>
-          <a:y>458</a:y>
+          <a:height>473</a:height>
+          <a:width>572</a:width>
+          <a:x>481</a:x>
+          <a:y>195</a:y>
         </SelectorWindowBounds>
         <_library xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
           <a:KeyValueOfstringCurvesLZZwEMY>
@@ -520,13 +588,13 @@
           <ScheduleItem>
             <Enabled>true</Enabled>
             <EndDate>2015-02-01T00:00:00</EndDate>
-            <EndTime>2017-02-08T23:59:59</EndTime>
+            <EndTime>2017-02-19T23:59:59</EndTime>
             <Friday>true</Friday>
             <Monday>true</Monday>
             <Saturday>true</Saturday>
             <ShowID>3073cf55-886d-4b1d-81bd-d6cc00f1e712</ShowID>
             <StartDate>2015-01-13T00:00:00</StartDate>
-            <StartTime>2017-02-08T00:00:00</StartTime>
+            <StartTime>2017-02-19T00:00:00</StartTime>
             <Sunday>true</Sunday>
             <Thursday>true</Thursday>
             <Tuesday>true</Tuesday>
@@ -11984,7 +12052,7 @@
             <a:Ttl>64</a:Ttl>
             <a:Unicast>192.168.1.200</a:Unicast>
             <a:Universe>1</a:Universe>
-            <a:seqNum>178</a:seqNum>
+            <a:seqNum>87</a:seqNum>
           </a:UniverseEntry>
         </Universes>
         <Warnings>false</Warnings>
@@ -13881,13 +13949,13 @@
           </a:DisplayItem>
         </DisplayItems>
         <Height>618</Height>
-        <Left>467</Left>
+        <Left>-9</Left>
         <SaveLocations>true</SaveLocations>
         <SetupHeight>786</SetupHeight>
         <SetupLeft>311</SetupLeft>
         <SetupTop>68</SetupTop>
         <SetupWidth>1038</SetupWidth>
-        <Top>219</Top>
+        <Top>183</Top>
         <Width>1043</Width>
       </VixenPreviewData>
     </Module>
