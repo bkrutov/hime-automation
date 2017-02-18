@@ -65,7 +65,7 @@
 /********************* START OF REQUIRED CONFIGURATION ***********************/
 // NRF_TYPE Description: http://learn.komby.com/wiki/58/configuration-settings#NRF_TYPE
 // Valid Values: RF1, MINIMALIST_SHIELD, WM_2999_NRF, RFCOLOR_2_4, MEGA_SHIELD
-#define NRF_TYPE                        MINIMALIST_SHIELD
+#define NRF_TYPE                        RF1
 
 // UNIVERSE Description: http://learn.komby.com/wiki/58/configuration-settings#UNIVERSE
 // Valid Values: 1-255
