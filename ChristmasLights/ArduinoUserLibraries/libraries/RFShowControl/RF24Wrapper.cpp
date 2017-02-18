@@ -82,12 +82,10 @@ bool RF24Wrapper::Initialize(int pRole, const uint64_t *pPipes, int pChannel, rf
     this->openWritingPipe(pPipes[0]); //Open pipe for Writing
     this->openReadingPipe(1,pPipes[1]); //Open pipe for Reading...But we aren't reading anything....
     this->setPALevel(RF24_PA_MAX); //Set the power level to high!
-	//TODO Find a method in the new RF24 library to replace teh below method.
-    //this->write_register(CONFIG, (this->read_register(CONFIG) | _BV(PWR_UP)) & ~_BV(PRIM_RX)); //set up radio for writing!
-    this->flush_tx(); //Clear the TX FIFO Buffers
-    this->powerUp(); //Fire up the radio
-    //this->ce(HIGH); //Turn on transmitter!
-    return this->channelSetSuccessfully;
+	
+	this->stopListening();
+       
+	return this->channelSetSuccessfully && this->payloadSizeSetSuccessful && this->dataRateSuccess;
   }
   else
   {

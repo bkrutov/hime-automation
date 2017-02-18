@@ -40,8 +40,6 @@
 *
 *    The Commercial Use of this Software is Prohibited.
 */
-// Below necessary to use alternative pins for nRF24 to avoid conflict with W5100
-#define SOFTSPI
 
 #include <Dhcp.h>
 #include <Dns.h>
@@ -52,7 +50,9 @@
 #include <EthernetUdp.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-#include <SPI.h>
+//(Boris) Should include DigitalIO. and not SPI.h for SOFTSPI
+//(Boris) SOFTSPI must be defined in RF24_config.h and not here (investigate why)
+#include <DigitalIO.h>
 
 #include <printf.h>
 //Include extra util.h for htonl
@@ -65,7 +65,7 @@
 /********************* START OF REQUIRED CONFIGURATION ***********************/
 // NRF_TYPE Description: http://learn.komby.com/wiki/58/configuration-settings#NRF_TYPE
 // Valid Values: RF1, MINIMALIST_SHIELD, WM_2999_NRF, RFCOLOR_2_4, MEGA_SHIELD
-#define NRF_TYPE                        MINIMALIST_SHIELD
+#define NRF_TYPE                        RF1
 
 // UNIVERSE Description: http://learn.komby.com/wiki/58/configuration-settings#UNIVERSE
 // Valid Values: 1-255
@@ -115,7 +115,7 @@ static uint8_t mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 + UNIVERSE};
 
 
 #define PIXEL_TYPE                      NONE
-//Seems used to switch between original RF24Wrapper (RF24 lib) and RFShowControl (komby RF24), but they are not fully conmatible
+//(Boris) Seems used to switch between original RF24Wrapper (RF24 lib) and RFShowControl (komby RF24), but they are not fully conmatible
 //Working RF_Out_DMX_In has no RF_WRAPPER defined, so it uses RFShowControl (see RFShowControlConfig.h)
 //#define RF_WRAPPER                      1 
 //Include this after all configuration variables are set
@@ -160,10 +160,22 @@ void setup(void)
   Serial.begin(115200);
   Serial.println(F("\n[E1.31 Arduino Ethernet Transmitter ]\n"));
 
+  //(Boris) radio.Initialize must include last parameter for controlled ID, if RFShowControl is used
   if (radio.Initialize(radio.TRANSMITTER, pipes, TRANSMIT_CHANNEL, DATA_RATE,0)){
+
+    delayMicroseconds(10000);
+    radio.printDetails();
+    delayMicroseconds(10000);
+    
     Serial.println(F("Radio Is UP"));
   }
   else{
+    delayMicroseconds(10000);
+    radio.printDetails();
+    delayMicroseconds(10000);
+
+    Serial.println(F("Cannot init radio  - resetting..."));
+    delayMicroseconds(10000);
     resetFunc(); //If nrf failes reset
   }
 
@@ -179,7 +191,9 @@ void setup(void)
     Serial.println(F("Ethernet Is UP"));
   }
   else{
-    resetFunc(); //If nrf failes reset
+    Serial.println(F("Cannot init ethernet  - resetting..."));
+    delayMicroseconds(10000);
+    resetFunc(); //If etehrnet failes reset
   }
 
 
