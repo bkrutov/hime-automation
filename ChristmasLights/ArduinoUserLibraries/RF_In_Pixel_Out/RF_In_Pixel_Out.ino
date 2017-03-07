@@ -18,21 +18,14 @@
  *    The Commercial Use of this Software is Prohibited.
  */
 
-//#include <Arduino.h>
 #include <EEPROM.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <SPI.h>
 #include <FastLED.h>
-//#include <GEColorEffects.h>
-//#include <LPD6803.h>
-//#include <TimerOne.h>
-//#include <WM2999.h>
 
-//#include "LPD6803.h"
 #include "IRFShowControl.h"
 #include "RFShowControl.h"
-//#include "WM2999RFShowControl.h"
 
 #include "MemoryFree.h"
 #include "printf.h"
@@ -62,7 +55,7 @@
 /****************** START OF NON-OTA CONFIGURATION SECTION *******************/
 // LISTEN_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#LISTEN_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US)
-#define LISTEN_CHANNEL                  10
+#define LISTEN_CHANNEL                  25
 
 // DATA_RATE Description:  http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
 // Valid Values: RF24_250KBPS, RF24_1MBPS
@@ -74,7 +67,7 @@
 
 // HARDCODED_NUM_PIXELS Description:  http://learn.komby.com/wiki/58/configuration-settings#HARDCODED_NUM_PIXELS
 // Valid Values: 1-170
-#define HARDCODED_NUM_PIXELS            100
+#define HARDCODED_NUM_PIXELS            170
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
 
 /************** START OF ADVANCED SETTINGS SECTION (OPTIONAL) ****************/
@@ -89,7 +82,7 @@
 //How Bright should our LEDs start at Description:  http://learn.komby.com/wiki/58/configuration-settings#LED_BRIGHTNESS
 #define LED_BRIGHTNESS                  255 //50%
 
-//#define DEBUG                           1
+#define DEBUG                           1
 
 //FCC_RESTRICT Description: http://learn.komby.com/wiki/58/configuration-settings#FCC_RESTRICT
 //Valid Values: 1, 0  (1 will prevent the use of channels that are not allowed in North America)
