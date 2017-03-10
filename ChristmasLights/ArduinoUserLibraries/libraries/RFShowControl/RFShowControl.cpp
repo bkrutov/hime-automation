@@ -474,16 +474,16 @@ void RFShowControl::DisplayDiagnosticStartup(IRFShowControl *string)
 }
 
 bool RFShowControl::Listen(void)
-{
+{	
   // See if there is any data in the RF buffer
   if (this->available())
   {
       // Fetch the payload, and see if this was the last one.
-	    this->read(&this->packetData, 32);
+	  this->read(&this->packetData, 32);
       
       //when process packet returns true we got the last channel we are listening to and its time to output....
       if (ProcessPacket(this->channelData, this->packetData))
-      {
+      {  
         //return true to the sketch and let it handle updates
         return true;
       }
@@ -525,7 +525,7 @@ bool RFShowControl::ProcessPacket(byte *dest, byte *p)
     //It could be in the packet is it?
     if (startChannel <= packetEndChannel)
     {
-      //set calculated start to the start channel
+ 	  //set calculated start to the start channel
       calcStartChannel = startChannel;
       //set the idx of the dest array to the start channel
       calcStartDestIdx = 0 ;
@@ -535,7 +535,7 @@ bool RFShowControl::ProcessPacket(byte *dest, byte *p)
     }
     else
     {
-      //start channel was after the range of channels in this packet. skip this packet.
+     //start channel was after the range of channels in this packet. skip this packet.
       return retVal;
     }
   }
@@ -566,7 +566,7 @@ bool RFShowControl::ProcessPacket(byte *dest, byte *p)
       // would never print our received data to the pixels.
       if ( packetEndChannel == finalChannel )
       {
-        retVal = true;
+		retVal = true;
       }
     }
   }
@@ -598,10 +598,11 @@ bool RFShowControl::ProcessPacket(byte *dest, byte *p)
     int numChannelsInPacket = calcEndChannel - calcStartChannel;
 
     //Use memcpy to copy the bytes from the radio packet into the data array.
-   // printf("seq %d : Start %d ,  End %d , fc %d psc %d |%d | %d |  numch %d \n", packetSequence, calcStartDestIdx,  calcStartSourceIdx, finalChannel, packetStartChann , calcStartChannel, calcEndChannel, numChannelsInPacket);
+    //printf("seq %d : Start %d ,  End %d , fc %d psc %d |%d | %d |  numch %d \n", packetSequence, calcStartDestIdx,  calcStartSourceIdx, finalChannel, packetStartChann , calcStartChannel, calcEndChannel, numChannelsInPacket);
     memcpy(&dest[calcStartDestIdx], &p[calcStartSourceIdx], numChannelsInPacket);
 
   }
+  
   return retVal;
 }
 
