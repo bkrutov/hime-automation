@@ -70,8 +70,8 @@
 // UNIVERSE Description: http://learn.komby.com/wiki/58/configuration-settings#UNIVERSE
 // Valid Values: 1-255
 //IF only using one universe make UNIVERSE_2 set to a universe you will not be using like 255 
-#define UNIVERSE                        1
-#define UNIVERSE_2                      2
+#define UNIVERSE                        10
+#define UNIVERSE_2                      11
 
 // IP Address Description: http://learn.komby.com/wiki/58/configuration-settings#IP-Address
 static uint8_t ip[] = { 192, 168, 1, 200 };
@@ -81,8 +81,8 @@ static uint8_t ip[] = { 192, 168, 1, 200 };
 // TRANSMIT_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#TRANSMIT_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US) if using only one universe ignore TRANSMIT_CHANNEL_2
 
-#define TRANSMIT_CHANNEL                10
-#define TRANSMIT_CHANNEL_2              20
+#define TRANSMIT_CHANNEL                20
+#define TRANSMIT_CHANNEL_2              25
 
 // DATA_RATE Description: http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
 // Valid Values: RF24_250KBPS, RF24_1MBPS   ( Only use one universe at RF24_250KBPS and 1 or 2 universes at RF24_1MBPS)=
