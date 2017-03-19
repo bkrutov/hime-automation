@@ -69,7 +69,7 @@
 /****************** START OF NON-OTA CONFIGURATION SECTION *******************/
 // LISTEN_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#LISTEN_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US)
-#define LISTEN_CHANNEL                  10
+#define LISTEN_CHANNEL                  20
 
 // DATA_RATE Description:  http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
 // Valid Values: RF24_250KBPS, RF24_1MBPS
@@ -84,7 +84,7 @@
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!MUST MATCH ACTUAL TRANSMITTED NUMBER OF PIXELS, AS SET IN VIXEN - SERVES AS PACKET TERMINATION INDICATOR !!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#define HARDCODED_NUM_PIXELS_1           100
+#define HARDCODED_NUM_PIXELS_1           80
 #define HARDCODED_NUM_PIXELS_2           0
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
 
@@ -99,9 +99,11 @@
 // PIXEL_DATA_PIN Description:  http://learn.komby.com/wiki/58/configuration-settings#PIXEL_DATA_PIN
 // Valid Values: List of arduino Analog or Digital pins used for data signal, typically ~1-16
 //for the first (or only) pixel string what pin is it on?
-#define PIXEL_DATA_PIN_1                  2
+#define PIXEL_DATA_PIN_1                  6
 //if you are brave and have a second string what pin is it on?  if not using 4 wire pixels you can also use pin 4 for use of the RF1 header
-#define PIXEL_DATA_PIN_2                  3
+#define PIXEL_DATA_PIN_2                  0
+
+#define LED_INDICATOR_PIN                 9
 
 
 // PIXEL_CLOCK_PIN Description:  http://learn.komby.com/wiki/58/configuration-settings#PIXEL_CLOCK_PIN
@@ -145,8 +147,8 @@ void setup(void)
   printf_begin();
   Serial.println("Initializing Radio");
   #endif
-  pinMode(4, OUTPUT);
-  digitalWrite(4, HIGH);
+  pinMode(LED_INDICATOR_PIN, OUTPUT);
+  digitalWrite(LED_INDICATOR_PIN, HIGH);
   
   radio.EnableOverTheAirConfiguration(OVER_THE_AIR_CONFIG_ENABLE);
   uint8_t logicalControllerNumber = 0;
@@ -265,17 +267,16 @@ void setup(void)
   Serial.print(F("freeMemory()="));
   Serial.println(freeMemory());
   #endif
-  digitalWrite(4, LOW);
+  digitalWrite(LED_INDICATOR_PIN, LOW);
 }
 
 void loop(void)
 {  
-  digitalWrite(4, LOW);
+  digitalWrite(LED_INDICATOR_PIN, LOW);
   CRGB* temp = (CRGB*)data;
   //When Radio.Listen returns true its time to update the LEDs for all controllers, a full update was made
   if (radio.Listen())
   {
-    digitalWrite(4, HIGH);
     #ifdef FAST_SPI_CONTROL
     //how many channels of data do we need for the un-duplicated pixels?  this is the number of pixels if grouping is set to 1  its half if set to 2 etc.
     int pixelsNonDuplicated = countOfUnduplicatedPixels1+countOfUnduplicatedPixels2;
@@ -307,14 +308,17 @@ void loop(void)
         leds[i] =  (CRGB)temp[j];
       }
     }
+    digitalWrite(LED_INDICATOR_PIN, HIGH);
     LEDS.show();
+    digitalWrite(LED_INDICATOR_PIN, LOW);
+
     #else
     //TODO Refactor regular Pixel Controller to reorder like fast LED does with these parameters.
     strip.Paint();
     #endif
-    
-    #ifdef DEBUG
-        Serial.println(F("LED Refresh"));
-    #endif
+
+    //#ifdef DEBUG
+    //    Serial.println(F("LED Refresh"));
+    //#endif
   }
 }
