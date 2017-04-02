@@ -70,10 +70,10 @@
 // UNIVERSE Description: http://learn.komby.com/wiki/58/configuration-settings#UNIVERSE
 // Valid Values: 1-255
 //IF only using one universe make UNIVERSE_2 set to a universe you will not be using like 255 
-#define UNIVERSE                        1
-#define UNIVERSE_2                      2 
-//#define UNIVERSE                        10 //Lena's lighthouse Doors
-//#define UNIVERSE_2                      11 //Lena's lighthouse Ceiling
+//#define UNIVERSE                        1
+//#define UNIVERSE_2                      2 
+#define UNIVERSE                        10 //Lena's lighthouse Doors
+#define UNIVERSE_2                      11 //Lena's lighthouse Ceiling
 
 // IP Address Description: http://learn.komby.com/wiki/58/configuration-settings#IP-Address
 static uint8_t ip[] = { 192, 168, 1, 200 };
@@ -83,10 +83,10 @@ static uint8_t ip[] = { 192, 168, 1, 200 };
 // TRANSMIT_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#TRANSMIT_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US) if using only one universe ignore TRANSMIT_CHANNEL_2
 
-#define TRANSMIT_CHANNEL                10
-#define TRANSMIT_CHANNEL_2              15
-//#define TRANSMIT_CHANNEL                20 //Lena's lighthouse Doors
-//#define TRANSMIT_CHANNEL_2              25 //Lena's lighthouse Ceiling
+//#define TRANSMIT_CHANNEL                10
+//#define TRANSMIT_CHANNEL_2              15
+#define TRANSMIT_CHANNEL                20 //Lena's lighthouse Doors
+#define TRANSMIT_CHANNEL_2              25 //Lena's lighthouse Ceiling
 
 // DATA_RATE Description: http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
 // Valid Values: RF24_250KBPS, RF24_1MBPS   ( Only use one universe at RF24_250KBPS and 1 or 2 universes at RF24_1MBPS)=
@@ -103,7 +103,7 @@ static uint8_t ip[] = { 192, 168, 1, 200 };
 // RF_INTERPACKETDELAY_1MBPS  Description: TODO URL NEEDED 
 // When using the 1MPBS speed you need to tune this value to your hardware.  Lower is better for faster refresh rate, however hardware may need a setting of 700 to work on some hardware 
 //Valid values are 1 - 700  where most tested clone/china hardware is needing a setting around 550-700 
-#define RF_INTERPACKETDELAY_1MBPS  700 
+#define RF_INTERPACKETDELAY_1MBPS  5 
 
 
 // RF_INTERPACKETDELAY_250KBPS  Description: TODO URL NEEDED 
@@ -127,7 +127,9 @@ static uint8_t mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 + UNIVERSE};
 //END Configuration
 //Where in the packet does the dmx start
 #define DMX_CHANNEL_DATA_START          126 //DMX Packet Position 0xA8
-#define DMX_MAX_CHANNEL                 510
+
+#define DMX_MAX_CHANNEL                 372
+#define DMX_MAX_CHANNEL_2               483
 
 // If we have a MEGA we can use a larger buffer for better performance
 // Otherwise use the smaller size for a UNO
@@ -275,12 +277,12 @@ void loop(void)
       universe = ((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]);
       uint8_t channelTmp = radio.GetChannel();
 
-      Serial.print(F("before "));
-      Serial.print(universe);
-      Serial.print(F(", cu: "));
-      Serial.print(currentUniverse);
-      Serial.print(F(", ch "));
-      Serial.println(channelTmp);
+      //Serial.print(F("before "));
+      //Serial.print(universe);
+      //Serial.print(F(", cu: "));
+      //Serial.print(currentUniverse);
+      //Serial.print(F(", ch "));
+      //Serial.println(channelTmp);
       //printf("before %d, cu: $%d, ch %d \r\n", universe,currentUniverse, channelTmp);
       //check and change channels if we are on the wrong universe
       if (currentUniverse != universe)
@@ -319,7 +321,7 @@ void transmitDataFromBuffer(uint8_t* pBuffer)
 {
   int r;
 
-  if (numChannelsInPacket <= DMX_MAX_CHANNEL && numChannelsInPacket >0 && numPackets <= 18 && (universe == UNIVERSE || universe == UNIVERSE_2))
+  if (((universe == UNIVERSE && numChannelsInPacket <= DMX_MAX_CHANNEL)|| (universe == UNIVERSE_2 && numChannelsInPacket <= DMX_MAX_CHANNEL_2 )) && numChannelsInPacket >0 && numPackets <= 18 )
   {
     validBuf = pBuffer;
     for (r = 0; r< numPackets; r++)
