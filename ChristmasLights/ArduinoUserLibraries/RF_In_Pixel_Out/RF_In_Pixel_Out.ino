@@ -69,8 +69,8 @@
 /****************** START OF NON-OTA CONFIGURATION SECTION *******************/
 // LISTEN_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#LISTEN_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US)
-//#define LISTEN_CHANNEL                  20 // Lena's doors - universe 10
-#define LISTEN_CHANNEL                  25 // Lena's ceiling - universe 11
+#define LISTEN_CHANNEL                  20 // Lena's doors - universe 10
+//#define LISTEN_CHANNEL                  25 // Lena's ceiling - universe 11
 
 
 // DATA_RATE Description:  http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
@@ -86,7 +86,9 @@
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!MUST MATCH ACTUAL TRANSMITTED NUMBER OF PIXELS, AS SET IN VIXEN - SERVES AS PACKET TERMINATION INDICATOR !!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#define HARDCODED_NUM_PIXELS_1           80
+#define HARDCODED_NUM_PIXELS_1           108 // Lena's doors
+//#define HARDCODED_NUM_PIXELS_1           92 // Lena's ceiling 
+
 #define HARDCODED_NUM_PIXELS_2           0
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
 
