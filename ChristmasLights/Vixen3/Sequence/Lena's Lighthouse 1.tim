@@ -231,35 +231,35 @@
           </d3p1:_alphas>
           <d3p1:_colors>
             <d3p1:ColorPoint>
+              <d3p1:_focus>0.29145728643216079</d3p1:_focus>
+              <d3p1:_position>0.5</d3p1:_position>
+              <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+                <d7p1:_x>44.495034804359648</d7p1:_x>
+                <d7p1:_y>27.769184080539606</d7p1:_y>
+                <d7p1:_z>3.0177415711761557</d7p1:_z>
+              </d3p1:_color>
+            </d3p1:ColorPoint>
+            <d3p1:ColorPoint>
               <d3p1:_focus>0.5</d3p1:_focus>
               <d3p1:_position>0</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>44.529489196328228</d7p1:_x>
-                <d7p1:_y>27.832899877536111</d7p1:_y>
-                <d7p1:_z>3.0452356807317953</d7p1:_z>
+                <d7p1:_x>20.42701496305072</d7p1:_x>
+                <d7p1:_y>11.971644937237837</d7p1:_y>
+                <d7p1:_z>95.8418779711573</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
             <d3p1:ColorPoint>
-              <d3p1:_focus>0.10555555555555556</d3p1:_focus>
-              <d3p1:_position>0.5</d3p1:_position>
+              <d3p1:_focus>0.66310160427807474</d3p1:_focus>
+              <d3p1:_position>1</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>77.9996609105533</d7p1:_x>
-                <d7p1:_y>77.3389885780639</d7p1:_y>
-                <d7p1:_z>67.949529274162941</d7p1:_z>
-              </d3p1:_color>
-            </d3p1:ColorPoint>
-            <d3p1:ColorPoint>
-              <d3p1:_focus>0.95</d3p1:_focus>
-              <d3p1:_position>0.99481865284974091</d3p1:_position>
-              <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>44.50367423901065</d7p1:_x>
-                <d7p1:_y>27.785158345700435</d7p1:_y>
-                <d7p1:_z>3.0246433098514407</d7p1:_z>
+                <d7p1:_x>19.283034070478639</d7p1:_x>
+                <d7p1:_y>9.6836831516939181</d7p1:_y>
+                <d7p1:_z>95.460551006889446</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
           </d3p1:_colors>
           <d3p1:_gammacorrected>false</d3p1:_gammacorrected>
-          <d3p1:_libraryReferenceName>GoldBright</d3p1:_libraryReferenceName>
+          <d3p1:_libraryReferenceName>GoldBlue</d3p1:_libraryReferenceName>
           <d3p1:_title i:nil="true" />
         </d3p1:ColorGradient>
       </d2p1:Colors>
@@ -270,7 +270,7 @@
         <d3p1:Points xmlns:d4p1="http://schemas.datacontract.org/2004/07/ZedGraph">
           <d4p1:PointPair>
             <schema i:type="a:int">11</schema>
-            <X i:type="a:double">0</X>
+            <X i:type="a:double">0.632500504113917</X>
             <Y i:type="a:double">100</Y>
             <schema2 i:type="a:int">11</schema2>
             <Z i:type="a:double">0</Z>
@@ -289,7 +289,7 @@
       </d2p1:LevelCurve>
       <d2p1:Orientation>Vertical</d2p1:Orientation>
       <d2p1:Repeat>1</d2p1:Repeat>
-      <d2p1:Show3D>false</d2p1:Show3D>
+      <d2p1:Show3D>true</d2p1:Show3D>
       <d2p1:Speed>6</d2p1:Speed>
     </d1p1:anyType>
   </_dataModels>
@@ -328,9 +328,9 @@
   <DefaultPlaybackEndTime i:nil="true" />
   <DefaultPlaybackStartTime>PT0.1616511S</DefaultPlaybackStartTime>
   <DefaultRowHeight>40</DefaultRowHeight>
-  <DefaultSplitterDistance>353</DefaultSplitterDistance>
+  <DefaultSplitterDistance>276</DefaultSplitterDistance>
   <MarkCollections />
   <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <TimePerPixel>PT0.0538599S</TimePerPixel>
-  <VisibleTimeStart>PT0.0000714S</VisibleTimeStart>
+  <VisibleTimeStart>PT0S</VisibleTimeStart>
 </TimedSequenceData>
