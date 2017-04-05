@@ -332,5 +332,5 @@
   <MarkCollections />
   <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <TimePerPixel>PT0.0538599S</TimePerPixel>
-  <VisibleTimeStart>PT0S</VisibleTimeStart>
+  <VisibleTimeStart>PT13.3573266S</VisibleTimeStart>
 </TimedSequenceData>
