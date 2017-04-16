@@ -692,32 +692,50 @@
             <d3p1:_focus>0.5</d3p1:_focus>
             <d3p1:_position>0</d3p1:_position>
             <d3p1:_color xmlns:d6p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-              <d6p1:_x>41.24</d6p1:_x>
-              <d6p1:_y>21.26</d6p1:_y>
-              <d6p1:_z>1.93</d6p1:_z>
+              <d6p1:_x>47.170317362814679</d6p1:_x>
+              <d6p1:_y>76.084369000025291</d6p1:_y>
+              <d6p1:_z>71.9949734295513</d6p1:_z>
             </d3p1:_color>
           </d3p1:ColorPoint>
           <d3p1:ColorPoint>
             <d3p1:_focus>0.5</d3p1:_focus>
-            <d3p1:_position>0.5</d3p1:_position>
+            <d3p1:_position>0.24870466321243523</d3p1:_position>
             <d3p1:_color xmlns:d6p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-              <d6p1:_x>35.76</d6p1:_x>
-              <d6p1:_y>71.52</d6p1:_y>
-              <d6p1:_z>11.92</d6p1:_z>
+              <d6p1:_x>20.524034230960616</d6p1:_x>
+              <d6p1:_y>9.9118179915908549</d6p1:_y>
+              <d6p1:_z>95.439177264762037</d6p1:_z>
             </d3p1:_color>
           </d3p1:ColorPoint>
           <d3p1:ColorPoint>
             <d3p1:_focus>0.5</d3p1:_focus>
-            <d3p1:_position>1</d3p1:_position>
+            <d3p1:_position>0.43005181347150256</d3p1:_position>
             <d3p1:_color xmlns:d6p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-              <d6p1:_x>18.05</d6p1:_x>
-              <d6p1:_y>7.22</d6p1:_y>
-              <d6p1:_z>95.05</d6p1:_z>
+              <d6p1:_x>46.5390703504051</d6p1:_x>
+              <d6p1:_y>76.6003059732664</d6p1:_y>
+              <d6p1:_z>33.953048543305734</d6p1:_z>
+            </d3p1:_color>
+          </d3p1:ColorPoint>
+          <d3p1:ColorPoint>
+            <d3p1:_focus>0.5</d3p1:_focus>
+            <d3p1:_position>0.61398963730569944</d3p1:_position>
+            <d3p1:_color xmlns:d6p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+              <d6p1:_x>35.2418287552239</d6p1:_x>
+              <d6p1:_y>16.351688793153382</d6p1:_y>
+              <d6p1:_z>95.906481897891325</d6p1:_z>
+            </d3p1:_color>
+          </d3p1:ColorPoint>
+          <d3p1:ColorPoint>
+            <d3p1:_focus>0.5</d3p1:_focus>
+            <d3p1:_position>0.89715536105032823</d3p1:_position>
+            <d3p1:_color xmlns:d6p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
+              <d6p1:_x>49.032069386403037</d6p1:_x>
+              <d6p1:_y>69.18272091760609</d6p1:_y>
+              <d6p1:_z>105.37708278813435</d6p1:_z>
             </d3p1:_color>
           </d3p1:ColorPoint>
         </d3p1:_colors>
         <d3p1:_gammacorrected>false</d3p1:_gammacorrected>
-        <d3p1:_libraryReferenceName i:nil="true" />
+        <d3p1:_libraryReferenceName>green-blue-violet-cool</d3p1:_libraryReferenceName>
         <d3p1:_title i:nil="true" />
       </d2p1:Gradient>
       <d2p1:HorizontalFade>true</d2p1:HorizontalFade>
@@ -746,8 +764,8 @@
       </d2p1:LevelCurve>
       <d2p1:Orientation>Vertical</d2p1:Orientation>
       <d2p1:Shimmer>false</d2p1:Shimmer>
-      <d2p1:Type>Outer</d2p1:Type>
-      <d2p1:VerticalFade>true</d2p1:VerticalFade>
+      <d2p1:Type>Center</d2p1:Type>
+      <d2p1:VerticalFade>false</d2p1:VerticalFade>
     </d1p1:anyType>
   </_dataModels>
   <_effectNodeSurrogates xmlns="">
@@ -826,10 +844,10 @@
     <ProviderType i:nil="true" />
     <SourceName i:nil="true" />
   </_selectedTimingProviderSurrogate>
-  <DefaultPlaybackEndTime>PT24.9681264S</DefaultPlaybackEndTime>
-  <DefaultPlaybackStartTime>PT10.8917082S</DefaultPlaybackStartTime>
+  <DefaultPlaybackEndTime i:nil="true" />
+  <DefaultPlaybackStartTime>PT0.1910826S</DefaultPlaybackStartTime>
   <DefaultRowHeight>32</DefaultRowHeight>
-  <DefaultSplitterDistance>0</DefaultSplitterDistance>
+  <DefaultSplitterDistance>250</DefaultSplitterDistance>
   <MarkCollections />
   <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <TimePerPixel>PT0.0636942S</TimePerPixel>

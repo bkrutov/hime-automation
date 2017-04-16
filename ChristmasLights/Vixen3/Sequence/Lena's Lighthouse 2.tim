@@ -844,10 +844,10 @@
     <ProviderType i:nil="true" />
     <SourceName i:nil="true" />
   </_selectedTimingProviderSurrogate>
-  <DefaultPlaybackEndTime>PT24.9681264S</DefaultPlaybackEndTime>
-  <DefaultPlaybackStartTime>PT10.8917082S</DefaultPlaybackStartTime>
+  <DefaultPlaybackEndTime i:nil="true" />
+  <DefaultPlaybackStartTime>PT0.1910826S</DefaultPlaybackStartTime>
   <DefaultRowHeight>32</DefaultRowHeight>
-  <DefaultSplitterDistance>0</DefaultSplitterDistance>
+  <DefaultSplitterDistance>250</DefaultSplitterDistance>
   <MarkCollections />
   <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <TimePerPixel>PT0.0636942S</TimePerPixel>
