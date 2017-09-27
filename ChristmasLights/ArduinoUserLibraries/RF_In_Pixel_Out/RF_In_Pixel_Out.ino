@@ -87,7 +87,7 @@
 // !!!!MUST MATCH ACTUAL TRANSMITTED NUMBER OF PIXELS, AS SET IN VIXEN - SERVES AS PACKET TERMINATION INDICATOR !!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #define HARDCODED_NUM_PIXELS_1           108 // Lena's doors
-//#define HARDCODED_NUM_PIXELS_1           92 // Lena's ceiling 
+//#define HARDCODED_NUM_PIXELS_1           154 // Lena's ceiling 
 
 #define HARDCODED_NUM_PIXELS_2           0
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
@@ -126,7 +126,7 @@
 
 
 //How Bright should our LEDs start at Description:  http://learn.komby.com/wiki/58/configuration-settings#LED_BRIGHTNESS
-#define LED_BRIGHTNESS                  128 //50%
+#define LED_BRIGHTNESS                  255 //100%
 
 #define DEBUG                           1
 

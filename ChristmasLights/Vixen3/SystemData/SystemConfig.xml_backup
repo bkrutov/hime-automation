@@ -5722,8 +5722,6 @@
       </Outputs>
     </Controller>
   </Controllers>
-  <ControllerLinks />
-  <SmartControllers />
   <Previews>
     <Preview name="Christmas Tree Spiral preview" typeId="f43c31bc-cfcd-4dbc-adb7-d349c9ec623d" instanceId="97629c57-ab3e-43a3-a946-1bcd181f1f9b" />
     <Preview name="Vixen Display Preview" typeId="f43c31bc-cfcd-4dbc-adb7-d349c9ec623d" instanceId="426b8c83-b487-421d-ab12-ccde073391e0" />
@@ -7889,6 +7887,7 @@
   <DisabledDevices>
     <Device id="b4478560-6e08-41c9-bfd4-8e478543b5d3" />
     <Device id="160dadc3-d2f4-468c-8942-5d528adaad55" />
+    <Device id="61062dca-acac-41a1-9596-aeb54543adfa" />
     <Device id="97629c57-ab3e-43a3-a946-1bcd181f1f9b" />
     <Device id="426b8c83-b487-421d-ab12-ccde073391e0" />
   </DisabledDevices>

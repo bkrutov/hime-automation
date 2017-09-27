@@ -844,8 +844,8 @@
     <ProviderType i:nil="true" />
     <SourceName i:nil="true" />
   </_selectedTimingProviderSurrogate>
-  <DefaultPlaybackEndTime>PT24.9681264S</DefaultPlaybackEndTime>
-  <DefaultPlaybackStartTime>PT10.8917082S</DefaultPlaybackStartTime>
+  <DefaultPlaybackEndTime i:nil="true" />
+  <DefaultPlaybackStartTime>PT0.318471S</DefaultPlaybackStartTime>
   <DefaultRowHeight>32</DefaultRowHeight>
   <DefaultSplitterDistance>0</DefaultSplitterDistance>
   <MarkCollections />
