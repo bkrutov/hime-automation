@@ -87,7 +87,7 @@
 // !!!!MUST MATCH ACTUAL TRANSMITTED NUMBER OF PIXELS, AS SET IN VIXEN - SERVES AS PACKET TERMINATION INDICATOR !!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #define HARDCODED_NUM_PIXELS_1           108 // Lena's doors
-//#define HARDCODED_NUM_PIXELS_1           154 // Lena's ceiling 
+//#define HARDCODED_NUM_PIXELS_1           161 // Lena's ceiling 
 
 #define HARDCODED_NUM_PIXELS_2           0
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
