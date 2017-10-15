@@ -328,9 +328,9 @@
   <DefaultPlaybackEndTime i:nil="true" />
   <DefaultPlaybackStartTime>PT0.1616511S</DefaultPlaybackStartTime>
   <DefaultRowHeight>40</DefaultRowHeight>
-  <DefaultSplitterDistance>276</DefaultSplitterDistance>
+  <DefaultSplitterDistance>340</DefaultSplitterDistance>
   <MarkCollections />
   <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <TimePerPixel>PT0.0538599S</TimePerPixel>
-  <VisibleTimeStart>PT0S</VisibleTimeStart>
+  <VisibleTimeStart>PT10.8797712S</VisibleTimeStart>
 </TimedSequenceData>
