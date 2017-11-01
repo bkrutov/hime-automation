@@ -140,9 +140,9 @@
               <d3p1:_focus>0.66310160427807474</d3p1:_focus>
               <d3p1:_position>1</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>19.283034070478639</d7p1:_x>
-                <d7p1:_y>9.6836831516939181</d7p1:_y>
-                <d7p1:_z>95.460551006889446</d7p1:_z>
+                <d7p1:_x>20.437015472408316</d7p1:_x>
+                <d7p1:_y>11.987392484187186</d7p1:_y>
+                <d7p1:_z>95.844390470388348</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
           </d3p1:_colors>
@@ -169,23 +169,23 @@
               <d3p1:_focus>0.5</d3p1:_focus>
               <d3p1:_position>0</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>47.170317362814679</d7p1:_x>
-                <d7p1:_y>76.084369000025291</d7p1:_y>
-                <d7p1:_z>71.9949734295513</d7p1:_z>
+                <d7p1:_x>20.369987022084562</d7p1:_x>
+                <d7p1:_y>11.856362615052753</d7p1:_y>
+                <d7p1:_z>95.822631930359577</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
             <d3p1:ColorPoint>
               <d3p1:_focus>0.5</d3p1:_focus>
-              <d3p1:_position>0.24870466321243523</d3p1:_position>
+              <d3p1:_position>0.25143953934740881</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>20.524034230960616</d7p1:_x>
-                <d7p1:_y>9.9118179915908549</d7p1:_y>
-                <d7p1:_z>95.439177264762037</d7p1:_z>
+                <d7p1:_x>48.732247700274073</d7p1:_x>
+                <d7p1:_y>68.58449540054815</d7p1:_y>
+                <d7p1:_z>105.27741590009136</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
             <d3p1:ColorPoint>
               <d3p1:_focus>0.5</d3p1:_focus>
-              <d3p1:_position>0.43005181347150256</d3p1:_position>
+              <d3p1:_position>0.50287907869481763</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
                 <d7p1:_x>46.5390703504051</d7p1:_x>
                 <d7p1:_y>76.6003059732664</d7p1:_y>
@@ -194,7 +194,7 @@
             </d3p1:ColorPoint>
             <d3p1:ColorPoint>
               <d3p1:_focus>0.5</d3p1:_focus>
-              <d3p1:_position>0.61398963730569944</d3p1:_position>
+              <d3p1:_position>0.76967370441458738</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
                 <d7p1:_x>35.2418287552239</d7p1:_x>
                 <d7p1:_y>16.351688793153382</d7p1:_y>
@@ -203,16 +203,16 @@
             </d3p1:ColorPoint>
             <d3p1:ColorPoint>
               <d3p1:_focus>0.5</d3p1:_focus>
-              <d3p1:_position>0.89715536105032823</d3p1:_position>
+              <d3p1:_position>1</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>49.032069386403037</d7p1:_x>
-                <d7p1:_y>69.18272091760609</d7p1:_y>
-                <d7p1:_z>105.37708278813435</d7p1:_z>
+                <d7p1:_x>20.369980988899623</d7p1:_x>
+                <d7p1:_y>11.856360223275006</d7p1:_y>
+                <d7p1:_z>95.822631786684909</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
           </d3p1:_colors>
           <d3p1:_gammacorrected>false</d3p1:_gammacorrected>
-          <d3p1:_libraryReferenceName>green-blue-violet-cool</d3p1:_libraryReferenceName>
+          <d3p1:_libraryReferenceName>Main Lenas lighthouse 1</d3p1:_libraryReferenceName>
           <d3p1:_title i:nil="true" />
         </d3p1:ColorGradient>
         <d3p1:ColorGradient>
@@ -252,9 +252,9 @@
               <d3p1:_focus>0.66310160427807474</d3p1:_focus>
               <d3p1:_position>1</d3p1:_position>
               <d3p1:_color xmlns:d7p1="http://schemas.datacontract.org/2004/07/Common.Controls.ColorManagement.ColorModels">
-                <d7p1:_x>19.283034070478639</d7p1:_x>
-                <d7p1:_y>9.6836831516939181</d7p1:_y>
-                <d7p1:_z>95.460551006889446</d7p1:_z>
+                <d7p1:_x>20.437015472408316</d7p1:_x>
+                <d7p1:_y>11.987392484187186</d7p1:_y>
+                <d7p1:_z>95.844390470388348</d7p1:_z>
               </d3p1:_color>
             </d3p1:ColorPoint>
           </d3p1:_colors>
@@ -270,7 +270,15 @@
         <d3p1:Points xmlns:d4p1="http://schemas.datacontract.org/2004/07/ZedGraph">
           <d4p1:PointPair>
             <schema i:type="a:int">11</schema>
-            <X i:type="a:double">0.632500504113917</X>
+            <X i:type="a:double">0</X>
+            <Y i:type="a:double">100</Y>
+            <schema2 i:type="a:int">11</schema2>
+            <Z i:type="a:double">0</Z>
+            <Tag i:nil="true" />
+          </d4p1:PointPair>
+          <d4p1:PointPair>
+            <schema i:type="a:int">11</schema>
+            <X i:type="a:double">50.324849057079291</X>
             <Y i:type="a:double">100</Y>
             <schema2 i:type="a:int">11</schema2>
             <Z i:type="a:double">0</Z>
@@ -289,7 +297,7 @@
       </d2p1:LevelCurve>
       <d2p1:Orientation>Vertical</d2p1:Orientation>
       <d2p1:Repeat>1</d2p1:Repeat>
-      <d2p1:Show3D>true</d2p1:Show3D>
+      <d2p1:Show3D>false</d2p1:Show3D>
       <d2p1:Speed>6</d2p1:Speed>
     </d1p1:anyType>
   </_dataModels>
@@ -328,7 +336,7 @@
   <DefaultPlaybackEndTime i:nil="true" />
   <DefaultPlaybackStartTime>PT0.1616511S</DefaultPlaybackStartTime>
   <DefaultRowHeight>40</DefaultRowHeight>
-  <DefaultSplitterDistance>340</DefaultSplitterDistance>
+  <DefaultSplitterDistance>100</DefaultSplitterDistance>
   <MarkCollections />
   <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <TimePerPixel>PT0.0538599S</TimePerPixel>
