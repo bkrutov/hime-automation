@@ -70,10 +70,8 @@
 // UNIVERSE Description: http://learn.komby.com/wiki/58/configuration-settings#UNIVERSE
 // Valid Values: 1-255
 //IF only using one universe make UNIVERSE_2 set to a universe you will not be using like 255 
-//#define UNIVERSE                        1
-//#define UNIVERSE_2                      2 
-#define UNIVERSE                        10 //Lena's lighthouse Doors
-#define UNIVERSE_2                      11 //Lena's lighthouse Ceiling
+#define UNIVERSE                        10 //Christmas Tree right half
+#define UNIVERSE_2                      11 //Christmas Tree left half
 
 // IP Address Description: http://learn.komby.com/wiki/58/configuration-settings#IP-Address
 static uint8_t ip[] = { 192, 168, 1, 200 };
@@ -83,14 +81,12 @@ static uint8_t ip[] = { 192, 168, 1, 200 };
 // TRANSMIT_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#TRANSMIT_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US) if using only one universe ignore TRANSMIT_CHANNEL_2
 
-//#define TRANSMIT_CHANNEL                10
-//#define TRANSMIT_CHANNEL_2              15
-#define TRANSMIT_CHANNEL                20 //Lena's lighthouse Doors
-#define TRANSMIT_CHANNEL_2              25 //Lena's lighthouse Ceiling
+#define TRANSMIT_CHANNEL                10 //Christmas Tree right half
+#define TRANSMIT_CHANNEL_2              11 //Christmas Tree left half
 
 // DATA_RATE Description: http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
-// Valid Values: RF24_250KBPS, RF24_1MBPS   ( Only use one universe at RF24_250KBPS and 1 or 2 universes at RF24_1MBPS)=
-#define DATA_RATE                       RF24_1MBPS
+// Valid Values: RF24_250KBPS, RF24_1MBPS   ( Only use one universe at RF24_250KBPS and 1 or 2 universes at RF24_1MBPS)
+#define DATA_RATE                       RF24_2MBPS
 /******************* END OF NON-OTA CONFIGURATION SECTION ********************/
 
 /************** START OF ADVANCED SETTINGS SECTION (OPTIONAL) ****************/
@@ -128,8 +124,8 @@ static uint8_t mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 + UNIVERSE};
 //Where in the packet does the dmx start
 #define DMX_CHANNEL_DATA_START          126 //DMX Packet Position 0xA8
 
-#define DMX_MAX_CHANNEL                 324 //Lena's lighthouse Doors
-#define DMX_MAX_CHANNEL_2               483 //Lena's lighthouse Ceiling
+#define DMX_MAX_CHANNEL                 300 //Christmas Tree right half
+#define DMX_MAX_CHANNEL_2               300 //Christmas Tree left half
 
 // If we have a MEGA we can use a larger buffer for better performance
 // Otherwise use the smaller size for a UNO
