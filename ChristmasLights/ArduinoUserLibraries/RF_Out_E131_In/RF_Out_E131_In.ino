@@ -99,7 +99,7 @@ static uint8_t ip[] = { 192, 168, 1, 200 };
 // RF_INTERPACKETDELAY_1MBPS  Description: TODO URL NEEDED 
 // When using the 1MPBS speed you need to tune this value to your hardware.  Lower is better for faster refresh rate, however hardware may need a setting of 700 to work on some hardware 
 //Valid values are 1 - 700  where most tested clone/china hardware is needing a setting around 550-700 
-#define RF_INTERPACKETDELAY_1MBPS  5 
+#define RF_INTERPACKETDELAY_1MBPS  5
 
 
 // RF_INTERPACKETDELAY_250KBPS  Description: TODO URL NEEDED 
@@ -124,8 +124,8 @@ static uint8_t mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 + UNIVERSE};
 //Where in the packet does the dmx start
 #define DMX_CHANNEL_DATA_START          126 //DMX Packet Position 0xA8
 
-#define DMX_MAX_CHANNEL                 300 //Christmas Tree right half
-#define DMX_MAX_CHANNEL_2               300 //Christmas Tree left half
+#define DMX_MAX_CHANNEL                 300 //Christmas Tree left half
+#define DMX_MAX_CHANNEL_2               300 //Christmas Tree right half
 
 // If we have a MEGA we can use a larger buffer for better performance
 // Otherwise use the smaller size for a UNO
@@ -162,7 +162,7 @@ void setup(void)
 
   if (radio.Initialize(radio.TRANSMITTER, pipes, TRANSMIT_CHANNEL, DATA_RATE)){
     delayMicroseconds(10000);
-    radio.printDetails();
+    //radio.printDetails();
     delayMicroseconds(10000);
     
     Serial.println(F("Radio Is UP"));
@@ -192,7 +192,7 @@ void setup(void)
     Serial.println(F("Cannot init ethernet  - resetting..."));
     delayMicroseconds(10000);
     
-    resetFunc(); //If nrf failes reset
+    resetFunc(); //If ethernet failes reset
   }
 
 
@@ -200,7 +200,7 @@ void setup(void)
 
   radio.printDetails();
 
-  Serial.print(F("DMX start channel= "));
+  Serial.print(F("DMX channel data start= "));
   Serial.println(DMX_CHANNEL_DATA_START);
   Serial.print(F("Komby channel    = "));
   Serial.println(TRANSMIT_CHANNEL);
@@ -235,10 +235,9 @@ void loop(void)
 {
   int packetSize = Udp.parsePacket();
   if (packetSize > 0)
-  {
-//    Serial.print(F("Packet received: size = "));
-//    Serial.println(packetSize);
-    
+  {   
+    //Connected FTDI board seems interfering with radio transmission - check out of memory  root cause or radio interference root cause
+    //looping could also be confirmed by blinking red LED on arduino mini
     //printf("Packet received: size = %d \r\n", packetSize);
     
     if (validBuf == buffer2)
@@ -285,8 +284,7 @@ void loop(void)
       {   
         if (universe == UNIVERSE){
           currentUniverse = universe; 
-          radio.setChannel(TRANSMIT_CHANNEL);
-         
+          radio.setChannel(TRANSMIT_CHANNEL);        
         }
         else {
           currentUniverse = universe;
@@ -295,22 +293,14 @@ void loop(void)
       }
       channelTmp = radio.GetChannel();
       if ((universe == UNIVERSE && channelTmp == TRANSMIT_CHANNEL) || (universe == UNIVERSE_2 && channelTmp == TRANSMIT_CHANNEL_2)) {
-        //printf("send %d:%d, ch %d \r\n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
         transmitDataFromBuffer(buf);
-        //delayMicroseconds(200);
+        //printf("send %d:%d, ch %d \r\n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
       }
       else {
-        
-        //printf("not sent %d:%d, ch %d \r\n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
+        printf("not sent %d:%d, ch %d \r\n", universe,((buf[E1_31_FRAMING_UNIVERSE_ID] << 8) | buf[E1_31_FRAMING_UNIVERSE_ID + 1]), radio.GetChannel());
       }    
     }
   }
-  //  else if (REFRESH_RATE && millis() - duration >= REFRESH_RATE)
-  //  {
-  //    //no data received -re-send
-  //    transmitDataFromBuffer(validBuf);
-  //    duration = millis();
-  //  }
 }
 
 void transmitDataFromBuffer(uint8_t* pBuffer)
