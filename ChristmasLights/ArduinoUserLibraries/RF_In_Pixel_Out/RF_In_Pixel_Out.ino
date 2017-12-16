@@ -75,7 +75,7 @@
 
 // DATA_RATE Description:  http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
 // Valid Values: RF24_250KBPS, RF24_1MBPS
-#define DATA_RATE                       RF24_2MBPS
+#define DATA_RATE                       RF24_1MBPS
 
 // HARDCODED_START_CHANNEL Description:  http://learn.komby.com/wiki/58/configuration-settings#HARDCODED_START_CHANNEL
 // Valid Values: 1-512
