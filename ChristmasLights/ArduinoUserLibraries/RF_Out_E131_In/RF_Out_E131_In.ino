@@ -232,7 +232,7 @@ long duration = millis();
 uint16_t numChannelsInPacket;
 uint8_t numPackets;
 uint16_t universe;
-int _rfinterpacketdelay = DATA_RATE == RF24_1MBPS ? RF_INTERPACKETDELAY_1MBPS : RF_INTERPACKETDELAY_250KBPS;
+int _rfinterpacketdelay = DATA_RATE == RF24_250KBPS ? RF_INTERPACKETDELAY_250KBPS : RF_INTERPACKETDELAY_1MBPS;
 boolean status;
 
 void loop(void)
