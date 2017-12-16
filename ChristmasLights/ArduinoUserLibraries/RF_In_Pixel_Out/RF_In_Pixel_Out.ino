@@ -69,8 +69,8 @@
 /****************** START OF NON-OTA CONFIGURATION SECTION *******************/
 // LISTEN_CHANNEL Description: http://learn.komby.com/wiki/58/configuration-settings#LISTEN_CHANNEL
 // Valid Values: 0-83, 101-127  (Note: use of channels 84-100 is not allowed in the US)
-#define LISTEN_CHANNEL                  10 // Christmas tree right half - universe 10
-//#define LISTEN_CHANNEL                  11 // Christmas tree left half - universe 11
+#define LISTEN_CHANNEL                  10 // Christmas tree left half - universe 10 - green LED
+//#define LISTEN_CHANNEL                  11 // Christmas tree right half - universe 11 - blue LED
 
 
 // DATA_RATE Description:  http://learn.komby.com/wiki/58/configuration-settings#DATA_RATE
