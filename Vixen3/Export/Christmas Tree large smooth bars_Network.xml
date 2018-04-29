@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vixen3_Export>
+	<Resolution>25</Resolution>
+	<OutFile>Christmas Tree large smooth bars.fseq</OutFile>
+	<Duration>00:01:00</Duration>
+	<Network>
+		<Controller>
+			<Index>0</Index>
+			<Name>DMX Open test</Name>
+			<StartChan>1</StartChan>
+			<Channels>300</Channels>
+		</Controller>
+		<Controller>
+			<Index>1</Index>
+			<Name>Christmas Tree small- Streaming ACN (E1.31)</Name>
+			<StartChan>301</StartChan>
+			<Channels>300</Channels>
+		</Controller>
+		<Controller>
+			<Index>2</Index>
+			<Name>Lena's Lighthouse - Doors - Streaming ACN (E1.31)</Name>
+			<StartChan>601</StartChan>
+			<Channels>324</Channels>
+		</Controller>
+		<Controller>
+			<Index>3</Index>
+			<Name>Lena's Lighthouse - Ceiling - Streaming ACN (E1.31)</Name>
+			<StartChan>925</StartChan>
+			<Channels>483</Channels>
+		</Controller>
+		<Controller>
+			<Index>4</Index>
+			<Name>Christmas Tree large</Name>
+			<StartChan>1408</StartChan>
+			<Channels>600</Channels>
+		</Controller>
+	</Network>
+</Vixen3_Export>

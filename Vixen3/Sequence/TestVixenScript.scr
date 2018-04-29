@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScriptData xmlns:a="http://www.w3.org/2001/XMLSchema" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/VixenModules.SequenceType.Script">
+  <ModuleInstanceId xmlns="">a89d4ed6-45ba-4cbf-a1ab-f191ad0d2ac8</ModuleInstanceId>
+  <ModuleTypeId xmlns="">cd5ca8e5-10d8-4342-9a42-aed48209c7cc</ModuleTypeId>
+  <Length xmlns="">P10675199DT2H48M5.4775807S</Length>
+  <Version xmlns="">0</Version>
+  <_dataModels xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="" />
+  <_effectNodeSurrogates xmlns="" />
+  <_filterNodeSurrogates xmlns="" />
+  <_mediaSurrogates xmlns="" />
+  <_selectedTimingProviderSurrogate xmlns="">
+    <ProviderType i:nil="true" />
+    <SourceName i:nil="true" />
+  </_selectedTimingProviderSurrogate>
+  <ClassName xmlns="http://schemas.datacontract.org/2004/07/Common.ScriptSequence">TestVixenScript</ClassName>
+  <ExternalAssemblies xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Common.ScriptSequence" />
+  <FrameworkAssemblies xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Common.ScriptSequence" />
+  <ScriptLanguageModuleId xmlns="http://schemas.datacontract.org/2004/07/Common.ScriptSequence">2d17e4a5-8b05-4a3d-810e-4f6724777799</ScriptLanguageModuleId>
+  <SourceFileDirectory xmlns="http://schemas.datacontract.org/2004/07/Common.ScriptSequence">C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Module Data Files\ScriptSource\TestVixenScript</SourceFileDirectory>
+  <_sourceFileCollectionSurrogate xmlns:d1p1="http://schemas.datacontract.org/2004/07/Common.ScriptSequence.Surrogate" xmlns="http://schemas.datacontract.org/2004/07/Common.ScriptSequence">
+    <d1p1:SourceFiles>
+      <d1p1:SourceFileSurrogate>
+        <d1p1:Name>Main.cs</d1p1:Name>
+      </d1p1:SourceFileSurrogate>
+    </d1p1:SourceFiles>
+  </_sourceFileCollectionSurrogate>
+</ScriptData>

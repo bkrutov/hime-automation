@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vixen3_Export>
+	<Resolution>25</Resolution>
+	<OutFile>LLH-single-color-slow-twinkle-glow.eseq</OutFile>
+	<Duration>00:04:40</Duration>
+	<Network>
+		<Controller>
+			<Index>0</Index>
+			<Name>DMX Open test</Name>
+			<StartChan>1</StartChan>
+			<Channels>300</Channels>
+		</Controller>
+		<Controller>
+			<Index>1</Index>
+			<Name>Christmas Tree small- Streaming ACN (E1.31)</Name>
+			<StartChan>301</StartChan>
+			<Channels>300</Channels>
+		</Controller>
+		<Controller>
+			<Index>2</Index>
+			<Name>Christmas Tree large</Name>
+			<StartChan>601</StartChan>
+			<Channels>600</Channels>
+		</Controller>
+		<Controller>
+			<Index>3</Index>
+			<Name>Lena's Lighthouse - E1.31</Name>
+			<StartChan>1201</StartChan>
+			<Channels>804</Channels>
+		</Controller>
+	</Network>
+</Vixen3_Export>

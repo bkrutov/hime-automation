@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TimedSequenceData version="4" xmlns:a="http://www.w3.org/2001/XMLSchema" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/VixenModules.Sequence.Timed">
+  <ModuleInstanceId xmlns="">bc434edf-c5ec-45a7-86fd-aae0e959d0df</ModuleInstanceId>
+  <ModuleTypeId xmlns="">296bdba2-9bf3-4bff-a9f2-13efac5c8ecb</ModuleTypeId>
+  <Length xmlns="">PT2M48.202S</Length>
+  <SequenceLayers xmlns:d1p1="http://schemas.datacontract.org/2004/07/Vixen.Sys.LayerMixing" xmlns="">
+    <d1p1:Layers xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <d2p1:anyType i:type="d1p1:DefaultLayer">
+        <d1p1:Id>a238e1be-c93e-49d2-9702-5b6aefbc38a5</d1p1:Id>
+        <d1p1:LayerLevel>0</d1p1:LayerLevel>
+        <d1p1:LayerName>Default</d1p1:LayerName>
+        <d1p1:Type>Default</d1p1:Type>
+      </d2p1:anyType>
+    </d1p1:Layers>
+    <d1p1:_effectLayerMap xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  </SequenceLayers>
+  <Version xmlns="">0</Version>
+  <_dataModels xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="">
+    <d1p1:anyType xmlns:d2p1="http://schemas.datacontract.org/2004/07/VixenModules.Media.Audio" i:type="d2p1:AudioData">
+      <ModuleInstanceId>e90b2a1b-1f57-4a09-958e-8579f04bafb9</ModuleInstanceId>
+      <ModuleTypeId>fe460392-3fab-4c63-99dd-d76c48354150</ModuleTypeId>
+      <d2p1:FilePath>C:\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\15 - The Nutcracker March.mp3</d2p1:FilePath>
+      <d2p1:RelativeAudioPath>..\Users\Boris\Dropbox\Shared Boris\ChristmasLights\Vixen 3\Sequence\15 - The Nutcracker March.mp3</d2p1:RelativeAudioPath>
+    </d1p1:anyType>
+  </_dataModels>
+  <_effectNodeSurrogates xmlns="" />
+  <_filterNodeSurrogates xmlns="" />
+  <_layerMixingFilterDataModels xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="" />
+  <_layerMixingFilterSurrogates xmlns="" />
+  <_mediaSurrogates xmlns="">
+    <MediaSurrogate>
+      <FileName>15 - The Nutcracker March.mp3</FileName>
+      <InstanceId>e90b2a1b-1f57-4a09-958e-8579f04bafb9</InstanceId>
+      <TypeId>fe460392-3fab-4c63-99dd-d76c48354150</TypeId>
+    </MediaSurrogate>
+  </_mediaSurrogates>
+  <_selectedTimingProviderSurrogate xmlns="">
+    <ProviderType>Media</ProviderType>
+    <SourceName>15 - The Nutcracker March.mp3</SourceName>
+  </_selectedTimingProviderSurrogate>
+  <DefaultPlaybackEndTime i:nil="true" />
+  <DefaultPlaybackStartTime i:nil="true" />
+  <DefaultRowHeight>32</DefaultRowHeight>
+  <DefaultSplitterDistance>100</DefaultSplitterDistance>
+  <MarkCollections>
+    <MarkCollection>
+      <Bold>false</Bold>
+      <Enabled>true</Enabled>
+      <Id>14420891-86e1-4a10-8107-5c32954faf63</Id>
+      <Level>10</Level>
+      <MarkColor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Drawing">
+        <d3p1:knownColor>79</d3p1:knownColor>
+        <d3p1:name i:nil="true" />
+        <d3p1:state>1</d3p1:state>
+        <d3p1:value>0</d3p1:value>
+      </MarkColor>
+      <Marks xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <d3p1:duration>PT0.9043968S</d3p1:duration>
+        <d3p1:duration>PT1.376256S</d3p1:duration>
+        <d3p1:duration>PT1.5171584S</d3p1:duration>
+        <d3p1:duration>PT1.6646144S</d3p1:duration>
+        <d3p1:duration>PT1.7955404S</d3p1:duration>
+        <d3p1:duration>PT2.2702518S</d3p1:duration>
+        <d3p1:duration>PT2.7279909S</d3p1:duration>
+        <d3p1:duration>PT3.2041737S</d3p1:duration>
+        <d3p1:duration>PT3.653632S</d3p1:duration>
+        <d3p1:duration>PT4.6361832S</d3p1:duration>
+        <d3p1:duration>PT5.0844495S</d3p1:duration>
+        <d3p1:duration>PT5.2297784S</d3p1:duration>
+        <d3p1:duration>PT5.3679428S</d3p1:duration>
+        <d3p1:duration>PT5.5112244S</d3p1:duration>
+        <d3p1:duration>PT5.9907965S</d3p1:duration>
+        <d3p1:duration>PT6.454448S</d3p1:duration>
+        <d3p1:duration>PT6.9233385S</d3p1:duration>
+        <d3p1:duration>PT7.392229S</d3p1:duration>
+        <d3p1:duration>PT8.288917S</d3p1:duration>
+        <d3p1:duration>PT8.7684755S</d3p1:duration>
+        <d3p1:duration>PT9.2063302S</d3p1:duration>
+        <d3p1:duration>PT9.6196323S</d3p1:duration>
+        <d3p1:duration>PT10.1004688S</d3p1:duration>
+        <d3p1:duration>PT10.529952S</d3p1:duration>
+        <d3p1:duration>PT10.9515788S</d3p1:duration>
+        <d3p1:duration>PT11.3574928S</d3p1:duration>
+        <d3p1:duration>PT11.9022032S</d3p1:duration>
+        <d3p1:duration>PT12.415488S</d3p1:duration>
+        <d3p1:duration>PT12.769026S</d3p1:duration>
+        <d3p1:duration>PT13.2162619S</d3p1:duration>
+        <d3p1:duration>PT13.6646556S</d3p1:duration>
+        <d3p1:duration>PT14.0417628S</d3p1:duration>
+        <d3p1:duration>PT14.5297263S</d3p1:duration>
+        <d3p1:duration>PT15.0878728S</d3p1:duration>
+        <d3p1:duration>PT15.5504448S</d3p1:duration>
+        <d3p1:duration>PT30.2354087S</d3p1:duration>
+        <d3p1:duration>PT30.6928545S</d3p1:duration>
+        <d3p1:duration>PT30.8615475S</d3p1:duration>
+        <d3p1:duration>PT30.9889041S</d3p1:duration>
+        <d3p1:duration>PT31.1182354S</d3p1:duration>
+        <d3p1:duration>PT31.5905758S</d3p1:duration>
+        <d3p1:duration>PT32.05167S</d3p1:duration>
+        <d3p1:duration>PT32.5352566S</d3p1:duration>
+        <d3p1:duration>PT32.9749206S</d3p1:duration>
+        <d3p1:duration>PT34.3392966S</d3p1:duration>
+        <d3p1:duration>PT36.1595745S</d3p1:duration>
+        <d3p1:duration>PT36.616401S</d3p1:duration>
+        <d3p1:duration>PT36.9467217S</d3p1:duration>
+        <d3p1:duration>PT37.4527449S</d3p1:duration>
+        <d3p1:duration>PT42.4426472S</d3p1:duration>
+        <d3p1:duration>PT42.9093516S</d3p1:duration>
+        <d3p1:duration>PT43.3897826S</d3p1:duration>
+        <d3p1:duration>PT43.8427604S</d3p1:duration>
+        <d3p1:duration>PT44.2855664S</d3p1:duration>
+        <d3p1:duration>PT52.12039S</d3p1:duration>
+        <d3p1:duration>PT52.5662158S</d3p1:duration>
+        <d3p1:duration>PT52.991988S</d3p1:duration>
+        <d3p1:duration>PT53.4397829S</d3p1:duration>
+        <d3p1:duration>PT53.9316232S</d3p1:duration>
+        <d3p1:duration>PT54.3427136S</d3p1:duration>
+        <d3p1:duration>PT54.753804S</d3p1:duration>
+        <d3p1:duration>PT55.2456443S</d3p1:duration>
+        <d3p1:duration>PT55.6860983S</d3p1:duration>
+        <d3p1:duration>PT56.1688197S</d3p1:duration>
+        <d3p1:duration>PT56.5670063S</d3p1:duration>
+        <d3p1:duration>PT57.0148012S</d3p1:duration>
+        <d3p1:duration>PT57.4625961S</d3p1:duration>
+        <d3p1:duration>PT57.9324137S</d3p1:duration>
+        <d3p1:duration>PT58.1673225S</d3p1:duration>
+        <d3p1:duration>PT58.3802086S</d3p1:duration>
+        <d3p1:duration>PT58.7986399S</d3p1:duration>
+        <d3p1:duration>PT59.2704266S</d3p1:duration>
+        <d3p1:duration>PT59.7402442S</d3p1:duration>
+        <d3p1:duration>PT59.8723804S</d3p1:duration>
+        <d3p1:duration>PT1M0.0632438S</d3p1:duration>
+        <d3p1:duration>PT1M0.2027209S</d3p1:duration>
+        <d3p1:duration>PT1M0.635834S</d3p1:duration>
+        <d3p1:duration>PT1M1.1790606S</d3p1:duration>
+        <d3p1:duration>PT1M1.6048328S</d3p1:duration>
+        <d3p1:duration>PT1M2.0746504S</d3p1:duration>
+        <d3p1:duration>PT1M3.0216265S</d3p1:duration>
+        <d3p1:duration>PT1M3.4547396S</d3p1:duration>
+        <d3p1:duration>PT1M3.6088985S</d3p1:duration>
+        <d3p1:duration>PT1M3.7777392S</d3p1:duration>
+        <d3p1:duration>PT1M3.9318981S</d3p1:duration>
+        <d3p1:duration>PT1M4.4163975S</d3p1:duration>
+        <d3p1:duration>PT1M4.8788742S</d3p1:duration>
+        <d3p1:duration>PT1M5.3413509S</d3p1:duration>
+        <d3p1:duration>PT1M5.7964867S</d3p1:duration>
+        <d3p1:duration>PT1M6.7067583S</d3p1:duration>
+        <d3p1:duration>PT1M7.1985986S</d3p1:duration>
+        <d3p1:duration>PT1M7.6390526S</d3p1:duration>
+        <d3p1:duration>PT1M8.0354612S</d3p1:duration>
+        <d3p1:duration>PT1M8.5199606S</d3p1:duration>
+        <d3p1:duration>PT1M8.9530737S</d3p1:duration>
+        <d3p1:duration>PT1M9.4008686S</d3p1:duration>
+        <d3p1:duration>PT1M9.7972772S</d3p1:duration>
+        <d3p1:duration>PT1M10.3405038S</d3p1:duration>
+        <d3p1:duration>PT1M10.8617077S</d3p1:duration>
+        <d3p1:duration>PT1M11.2434345S</d3p1:duration>
+        <d3p1:duration>PT1M11.6838885S</d3p1:duration>
+        <d3p1:duration>PT1M12.1023198S</d3p1:duration>
+        <d3p1:duration>PT1M12.4767057S</d3p1:duration>
+        <d3p1:duration>PT1M12.895137S</d3p1:duration>
+        <d3p1:duration>PT1M13.4897499S</d3p1:duration>
+        <d3p1:duration>PT1M13.9815902S</d3p1:duration>
+        <d3p1:duration>PT1M14.803771S</d3p1:duration>
+        <d3p1:duration>PT1M15.61127S</d3p1:duration>
+        <d3p1:duration>PT1M16.4481326S</d3p1:duration>
+        <d3p1:duration>PT1M17.2482907S</d3p1:duration>
+        <d3p1:duration>PT1M17.8502445S</d3p1:duration>
+        <d3p1:duration>PT1M18.6650844S</d3p1:duration>
+        <d3p1:duration>PT1M22.4529888S</d3p1:duration>
+        <d3p1:duration>PT1M23.4733739S</d3p1:duration>
+        <d3p1:duration>PT1M24.3028956S</d3p1:duration>
+        <d3p1:duration>PT1M25.2498717S</d3p1:duration>
+        <d3p1:duration>PT1M28.9643671S</d3p1:duration>
+        <d3p1:duration>PT1M19.501947S</d3p1:duration>
+        <d3p1:duration>PT1M20.3167869S</d3p1:duration>
+        <d3p1:duration>PT1M21.1242859S</d3p1:duration>
+        <d3p1:duration>PT1M26.0575029S</d3p1:duration>
+        <d3p1:duration>PT1M26.9226771S</d3p1:duration>
+        <d3p1:duration>PT1M27.7199945S</d3p1:duration>
+        <d3p1:duration>PT1M28.5342761S</d3p1:duration>
+        <d3p1:duration>PT1M31.7593578S</d3p1:duration>
+        <d3p1:duration>PT1M35.4745176S</d3p1:duration>
+        <d3p1:duration>PT1M32.709353S</d3p1:duration>
+        <d3p1:duration>PT1M36.4075486S</d3p1:duration>
+        <d3p1:duration>PT1M51.1324742S</d3p1:duration>
+        <d3p1:duration>PT1M58.256012S</d3p1:duration>
+        <d3p1:duration>PT1M57.759138S</d3p1:duration>
+        <d3p1:duration>PT2M12.8140756S</d3p1:duration>
+        <d3p1:duration>PT2M42.2962992S</d3p1:duration>
+        <d3p1:duration>PT1M36.8455618S</d3p1:duration>
+        <d3p1:duration>PT1M37.2654868S</d3p1:duration>
+        <d3p1:duration>PT1M37.6625068S</d3p1:duration>
+        <d3p1:duration>PT1M38.1435118S</d3p1:duration>
+        <d3p1:duration>PT1M38.5558018S</d3p1:duration>
+        <d3p1:duration>PT1M39.0139018S</d3p1:duration>
+        <d3p1:duration>PT1M39.4414618S</d3p1:duration>
+        <d3p1:duration>PT1M39.9301018S</d3p1:duration>
+        <d3p1:duration>PT1M40.3882018S</d3p1:duration>
+        <d3p1:duration>PT1M40.8463018S</d3p1:duration>
+        <d3p1:duration>PT1M41.2891318S</d3p1:duration>
+        <d3p1:duration>PT1M41.7701368S</d3p1:duration>
+        <d3p1:duration>PT1M42.1900618S</d3p1:duration>
+        <d3p1:duration>PT1M42.7168768S</d3p1:duration>
+        <d3p1:duration>PT1M43.1062618S</d3p1:duration>
+        <d3p1:duration>PT1M43.6178068S</d3p1:duration>
+        <d3p1:duration>PT40.5398653S</d3p1:duration>
+        <d3p1:duration>PT35.5806742S</d3p1:duration>
+        <d3p1:duration>PT33.904196S</d3p1:duration>
+        <d3p1:duration>PT35.1873106S</d3p1:duration>
+        <d3p1:duration>PT34.7611667S</d3p1:duration>
+        <d3p1:duration>PT33.4171744S</d3p1:duration>
+        <d3p1:duration>PT33.6794168S</d3p1:duration>
+      </Marks>
+      <Name>Nutcracker March</Name>
+      <SolidLine>false</SolidLine>
+    </MarkCollection>
+  </MarkCollections>
+  <RowSettings xmlns:d1p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <TimePerPixel>PT0.0224954S</TimePerPixel>
+  <VisibleTimeStart>PT0S</VisibleTimeStart>
+</TimedSequenceData>
