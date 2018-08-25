@@ -21,7 +21,8 @@
       1
     ],
     "dhcp": true,
-    "ap_fallback": true
+    "ap_fallback": true,
+	"hostname": "lena-lighthouse"
   },
 
   "device": {
