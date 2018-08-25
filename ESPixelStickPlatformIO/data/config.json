@@ -21,7 +21,8 @@
       1
     ],
     "dhcp": true,
-    "ap_fallback": false
+    "ap_fallback": false,
+	"hostname": "ESPixelStick"
   },
 
   "device": {
