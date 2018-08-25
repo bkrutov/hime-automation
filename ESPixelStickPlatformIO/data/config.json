@@ -6,7 +6,7 @@
       192,
       168,
       1,
-      10
+      70
     ],
     "netmask": [
       255,
@@ -21,11 +21,11 @@
       1
     ],
     "dhcp": true,
-    "ap_fallback": false
+    "ap_fallback": true
   },
 
   "device": {
-    "id": "ESPixelStick"
+    "id": "lena-lighthouse"
   },
 
   "e131": {
