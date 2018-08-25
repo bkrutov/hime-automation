@@ -22,7 +22,7 @@
     ],
     "dhcp": true,
     "ap_fallback": true,
-	"hostname": "lena-lighthouse"
+    "hostname": "lena-lighthouse"
   },
 
   "device": {
@@ -33,13 +33,13 @@
     "universe": 1,
     "universe_limit": 512,
     "channel_start": 1,
-    "channel_count": 512,
+    "channel_count": 804,
     "multicast": false
   },
 
   "pixel": {
     "type": 0,
-    "color": 0,
+    "color": 1,
     "gamma": true
   },
 
