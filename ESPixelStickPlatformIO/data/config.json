@@ -22,7 +22,7 @@
     ],
     "dhcp": true,
     "ap_fallback": true,
-	"hostname": "pasha-bed"
+    "hostname": "pasha-bed"
   },
 
   "device": {
