@@ -6,7 +6,7 @@
       192,
       168,
       1,
-      10
+      71
     ],
     "netmask": [
       255,
@@ -21,25 +21,25 @@
       1
     ],
     "dhcp": true,
-    "ap_fallback": false,
-	"hostname": "ESPixelStick"
+    "ap_fallback": true,
+	"hostname": "pasha-bed"
   },
 
   "device": {
-    "id": "ESPixelStick"
+    "id": "pasha-bed"
   },
 
   "e131": {
     "universe": 1,
     "universe_limit": 512,
     "channel_start": 1,
-    "channel_count": 512,
+    "channel_count": 1050,
     "multicast": false
   },
 
   "pixel": {
     "type": 0,
-    "color": 0,
+    "color": 1,
     "gamma": true
   },
 
